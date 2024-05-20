@@ -17,8 +17,9 @@ import {
 import { ServerStyleSheets as JSSServerStyleSheets } from '@mui/styles';
 import theme from '../src/theme/theme';
 
-
-export default function MyDocument(props: DocumentProps & DocumentHeadTagsProps) {
+export default function MyDocument(
+  props: DocumentProps & DocumentHeadTagsProps,
+) {
   return (
     <Html lang="pt-br">
       <Head>
@@ -77,7 +78,9 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
           return {
             ...initialProps,
             styles: [
-              ...(Array.isArray(initialProps.styles) ? initialProps.styles : [initialProps.styles]),
+              ...(Array.isArray(initialProps.styles)
+                ? initialProps.styles
+                : [initialProps.styles]),
               <style
                 id="jss-server-side"
                 key="jss-server-side"

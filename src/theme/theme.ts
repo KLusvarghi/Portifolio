@@ -1,4 +1,4 @@
-import { Roboto } from 'next/font/google';
+import { Roboto, Poppins } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
@@ -7,6 +7,26 @@ const roboto = Roboto({
   subsets: ['latin'],
   display: 'swap',
 });
+
+const poppins = Poppins({
+  weight: ['500'],
+  // lineHeight: 32px
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const sidebar = createTheme({
+  typography: {
+    subtitle1: {
+      fontWeight: 500,
+      fontSize: 18,
+      fontFamily: 'Poppins',
+      lineHeigth: 32,
+
+    }
+    
+  }
+})
 
 // Create a theme instance.
 const theme = createTheme({
