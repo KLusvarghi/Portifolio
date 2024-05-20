@@ -5,8 +5,9 @@ import Head from './infra/components/Head';
 
 export default function Home() {
   return (
+    // <div style={{background: 'black'} }>
     <div>
-      <Head title="Home - Portifólio Kauã Ortolani Lusvarghi"/>
+      <Head title="Home - Portifólio Kauã Ortolani Lusvarghi" />
       <Header />
       <main>Hellow</main>
       <Footer />

@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+@import '../../../src/theme/variaveis';
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 40px;
+  background: fixed rgba(223, 239, 249, 85%);
+  box-sizing: border-box;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+
+  font-size: 18px;
+  line-height: 32px;
+  font-family: 'Poppins';
+  font-weight: 500;
+
+  .log {
+    cursor: pointer;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: 36px;
+  justify-content: center;
+  align-items: center;
+
+  .btnMobile {
+    border: none;
+    background-color: transparent;
+    color: $c1;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Poppins';
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 55px;
+
+      &:hover {
+        // animação de focus
+        li {
+          &:not(:hover) {
+            color: #3e80aa;
+            opacity: 0.3;
+            filter: blur(1px);
+          }
+          // .opacity {
+          // }
+        }
+      }
+
+      // animação underline
+      li {
+        cursor: pointer;
+        .opacity {
+          position: relative;
+          padding: 0.5rem;
+          font-size: 18px;
+          line-height: 32px;
+          font-weight: 500;
+          font-family: 'Poppins';
+          cursor: pointer;
+          transition: 0.5s;
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 100%;
+            left: 0;
+            background: #242526;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsivo abaixo de 1000px
+@media (max-width: 1000px) {
+  .headerContainer {
+    height: 60px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    .nav {
+      .btnMobile {
+        display: flex;
+
+        .hamburger {
+          width: 20px;
+          border-top: 2px solid;
+          color: #242526;
+
+          &::after,
+          &::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: currentColor;
+            margin-top: 5px;
+            transition: 0.3s;
+            position: relative;
+          }
+        }
+      }
+    }
+
+    .activeNone {
+      .menu {
+        display: none;
+      }
+    }
+
+    .active {
+      .menu {
+        visibility: visible;
+        background-color: rgba(223, 239, 249, 100%);
+        position: absolute;
+        align-items: end;
+        top: 58px;
+        right: 0;
+        z-index: 1000;
+
+        ul {
+          width: 17vw;
+          flex-direction: column;
+          row-gap: 16px;
+          align-items: end;
+          flex-grow: 1;
+          padding: 0;
+          align-items: end;
+
+          li {
+            text-align: end;
+            font-size: 22px;
+            width: 100%;
+            padding: 0 10px 0 0;
+            margin: 0;
+
+            .opacity {
+              &::after {
+                width: 0px;
+              }
+            }
+
+            .contact {
+              font-size: 18px;
+              line-height: 24px;
+              font-weight: 400;
+              padding: 0;
+              letter-spacing: normal;
+              background-color: transparent;
+
+              &:hover {
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+
+      .hamburger {
+        &::before {
+          transform: rotate(135deg);
+        }
+
+        &::after {
+          transform: rotate(-135deg);
+          top: -7px;
+        }
+      }
+    }
+  }
+}
+
+// Responsivo abaixo de 700px
+@media (max-width: 700px) {
+  .headerContainer {
+    .active {
+      .menu {
+        width: 180px;
+      }
+    }
+  }
+}
