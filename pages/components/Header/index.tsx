@@ -39,13 +39,14 @@ export default function Header() {
         <div className={styles.menu}>
           <ul id="menu">
             <li>
-              <span className={styles.opacity}>
+              <span className={styles.underline}>
                 <Link
                   onClick={() => setToggle(!toggle)}
                   to="home"
                   spy={true}
                   smooth={true}
                   offset={0}
+                  className={styles.link}
                   duration={500}
                 >
                   Home
@@ -54,13 +55,14 @@ export default function Header() {
             </li>
 
             <li>
-              <span className={styles.opacity}>
+              <span className={styles.underline}>
                 <Link
                   onClick={() => setToggle(!toggle)}
                   to="home"
                   spy={true}
                   smooth={true}
                   offset={0}
+                  className={styles.link}
                   duration={500}
                 >
                   Sobre mim
@@ -69,13 +71,14 @@ export default function Header() {
             </li>
 
             <li>
-              <span className={styles.opacity}>
+              <span className={styles.underline}>
                 <Link
                   onClick={() => setToggle(!toggle)}
                   to="home"
                   spy={true}
                   smooth={true}
                   offset={0}
+                  className={styles.link}
                   duration={500}
                 >
                   Projetos
@@ -84,13 +87,14 @@ export default function Header() {
             </li>
 
             <li>
-              <span className={styles.opacity}>
+              <span className={styles.underline}>
                 <Link
                   onClick={() => setToggle(!toggle)}
                   to="home"
                   spy={true}
                   smooth={true}
                   offset={0}
+                  className={styles.link}
                   duration={500}
                 >
                   Contato

@@ -1,23 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
 @import '../../../src/theme/variaveis';
 
 .headerContainer {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 0px 40px;
+  justify-content: space-between;
+  padding: 0px 60px;
   background: fixed rgba(223, 239, 249, 85%);
   box-sizing: border-box;
   z-index: 1000;
   width: 100%;
   position: fixed;
   height: 9%;
-
-  font-size: 18px;
-  line-height: 32px;
-  font-family: 'Poppins';
-  font-weight: 500;
 
   .log {
     cursor: pointer;
@@ -31,6 +26,7 @@
   justify-content: center;
   align-items: center;
 
+  // botão hamburger
   .btnMobile {
     border: none;
     background-color: transparent;
@@ -42,6 +38,7 @@
     padding: 0.5rem;
   }
 
+  // menu em si
   .menu {
     display: flex;
     align-items: center;
@@ -50,38 +47,33 @@
       list-style: none;
       display: flex;
       justify-content: center;
-      gap: 55px;
+      // gap: 55px;
 
       &:hover {
         // animação de focus
         li {
           &:not(:hover) {
-            color: #3e80aa;
+            color: #242526;
             opacity: 0.3;
             filter: blur(1px);
           }
-          // .opacity {
-          // }
         }
       }
 
       // animação underline
       li {
         cursor: pointer;
-        .opacity {
+
+        .underline {
           position: relative;
-          padding: 0.5rem;
-          font-size: 18px;
-          line-height: 32px;
-          font-weight: 500;
-          font-family: 'Poppins';
-          cursor: pointer;
           transition: 0.5s;
+          padding-bottom: 0.5rem;
 
           &::after {
             content: '';
             position: absolute;
-            width: 100%;
+            margin: 0 10% 0 10%;
+            width: 80%;
             height: 2px;
             top: 100%;
             left: 0;
@@ -94,6 +86,16 @@
           &:hover::after {
             transform: scaleX(1);
             transform-origin: left;
+          }
+
+          .link {
+            font-size: 14px;
+            line-height: 32px;
+            font-family: 'Poppins';
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 1.5rem;
           }
         }
       }
@@ -165,7 +167,7 @@
             padding: 0 10px 0 0;
             margin: 0;
 
-            .opacity {
+            .underline {
               &::after {
                 width: 0px;
               }
