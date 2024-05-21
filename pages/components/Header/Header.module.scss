@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0px 60px;
-  background: fixed rgba(223, 239, 249, 85%);
+  background: fixed $bgradient0;
   box-sizing: border-box;
   z-index: 1000;
   width: 100%;
@@ -53,7 +53,7 @@
         // animação de focus
         li {
           &:not(:hover) {
-            color: #242526;
+            color: $c10;
             opacity: 0.3;
             filter: blur(1px);
           }
@@ -77,7 +77,7 @@
             height: 2px;
             top: 100%;
             left: 0;
-            background: #242526;
+            background: $c10;
             transition: transform 0.5s;
             transform: scaleX(0);
             transform-origin: right;
@@ -118,7 +118,7 @@
         .hamburger {
           width: 20px;
           border-top: 2px solid;
-          color: #242526;
+          color: $c10;
 
           &::after,
           &::before {
@@ -144,7 +144,7 @@
     .active {
       .menu {
         visibility: visible;
-        background-color: rgba(223, 239, 249, 100%);
+        background-color: $bgradient0;
         position: absolute;
         align-items: end;
         top: 58px;

@@ -1,28 +1,29 @@
-$b0: #262261;  
-$b1: #17143F;  
-$b1-2: rgba(23, 20, 63, 99%);
-$b2: #5751CF;  
-$b3: #FB7701;  
-$b4: #F83903;  
-$b5: #D2CFFA;  
-
-$forms: rgba(251, 119, 1, .7);  
-
-// color icon
-
-$icon: #093B5A;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
 // Tons de cinza
-$c0: #FFFFFF;
-$c1: #F4F5F6;
-$c2: #E8EBED;
-$c3: #DEE0E2;
-$c4: #C1C4C8;
-$c5: #AAAEB6;
-$c6: #999CA4;
-$c7: #73777D;
-$c8: #5D616B;
+$c0: #ffffff;
+$c1: #f4f5f6;
+$c2: #e8ebed;
+$c3: #dee0e2;
+$c4: #c1c4c8;
+$c5: #aaaeb6;
+$c6: #999ca4;
+$c7: #73777d;
+$c8: #5d616b;
 $c9: #404447;
 $c10: #242526;
 $c11: #111111;
-$c12: #000;
+$c12: #000000;
+
+// Cores principais
+$m0: #DFEFF9;
+$m1: #3E80AA;
+$m2: #225E84;
+
+// backgrounds
+$b0: #f1f7fb;
+$b1: #0e0e0e;
+$bgradient0: rgba(223, 239, 249, 85%);
+
+// Font
+$font-1: 'Poppins'

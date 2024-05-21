@@ -3,13 +3,15 @@ import Header from './components/Header';
 import Footer from './components/Foooter';
 import Head from './infra/components/Head';
 import styles from './Main.module.scss';
+import Intro from './components/Intro';
 
 export default function Home() {
   return (
     // <div style={{background: 'black'} }>
-    <div className={styles.main}>
+    <div>
       <Head title="Home - Portifólio Kauã Ortolani Lusvarghi" />
-      <Header />
+      {/* <Header /> */}
+      <Intro/>
       <main>Hellow</main>
       <Footer />
     </div>

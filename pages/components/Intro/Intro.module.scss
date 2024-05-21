@@ -1,0 +1,12 @@
+.introContainer {
+  position: relative;
+  height: 100vh;
+  background-image: url('./../../../public/background/bgUp.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .wrapper {
+    top: 9%
+  }
+}
