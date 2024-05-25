@@ -1,20 +1,29 @@
-import React from 'react'
+import React from 'react';
 // import { useRef } from 'react';
-import styles from './Button.module.scss'
+import styles from './Button.module.scss';
+import Link from 'next/link';
 
 interface Props {
-  children: String
+  children?: String;
+  onClick?: () => void;
+  link?: string;
+  referencia?: string;
 }
 
-const Button = ({children}: Props) => {
+const Button = ({ children, onClick, link, referencia }: Props) => {
   // const buttonRef = useRef();
 
   return (
     // <div ref={buttonRef}>{children}</div>
-    <div>
-      <button className={styles.button}>{children}</button>
+    <div
+      className={styles.button}
+      // onClick={onclick}
+    >
+      <Link href={link ? link : ''} target="_blank" replace>
+        {children ? children : ''}
+      </Link>
     </div>
-  )
-}
+  );
+};
 
 export default Button;

@@ -17,12 +17,16 @@
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
     "@mui/material-nextjs": "^5.15.11",
+    "@mui/styles": "^5.15.18",
     "@types/react-scroll": "^1.8.10",
+    "@types/react-typical": "^0.1.2",
     "classnames": "^2.5.1",
+    "mui-styles": "^2.0.5",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-scroll": "^1.9.0",
+    "react-type-animation": "^3.2.0",
     "sass": "^1.77.1"
   },
   "devDependencies": {

@@ -19,6 +19,7 @@ export default function Header() {
         height={20}
         loading="eager"
         onError={(e) => console.error('error: ', e.target)} //caso de erro ele exibe no console
+        onClick={() => {}}
       />
       <nav className={classNames({
         [styles.nav]: true,
