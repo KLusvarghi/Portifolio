@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Foooter';
 import Head from './infra/components/Head';
 import Intro from './components/Intro';
-import AboutMe from './components/AboutMe/indes';
+import AboutMe from './components/AboutMe';
 
 export default function Home() {
   return (
