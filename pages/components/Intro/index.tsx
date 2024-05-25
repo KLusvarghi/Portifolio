@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Intro.module.scss';
 import Button from '../Button';
 import Link from 'next/link';
@@ -11,6 +11,28 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function Intro() {
   const [active, setActive] = useState(false);
+
+  const [width, setWidth] = useState(0);
+
+  // efeito para atualziar o tamanho da dela no momento atual do usuário
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    // verifica se estamos no client
+    // Para garantir que o código só tente acessar window.innerWidth
+    if (typeof window !== 'undefined') {
+      handleResize()
+    }
+
+    // Adiciona o event listener para o evento de redimensionamento
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <main className={styles.introContainer}>
@@ -61,8 +83,12 @@ export default function Intro() {
           </div>
           {active && (
             <div className={styles.btns}>
-              <Button>Contato</Button>
-              <Button>Projetos</Button>
+              <Button size={width <= 1200 ? 'medium' : 'normal'}>
+                Contato
+              </Button>
+              <Button size={width <= 1200 ? 'medium' : 'normal'}>
+                Projetos
+              </Button>
             </div>
           )}
         </div>

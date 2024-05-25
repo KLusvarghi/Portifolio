@@ -88,7 +88,7 @@
       display: flex;
       gap: 40px;
       margin-top: 20px;
-  animation: show-down 1.2s forwards;
+      animation: show-down 1.2s forwards;
     }
   }
 
@@ -149,5 +149,34 @@
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .introContainer {
+    .intro {
+      .textMain {
+        max-width: 840px;
+
+        p {
+          //   font-size: 24px;
+          //   line-height: 36px;
+          font-size: 18px;
+          line-height: 26px;
+        }
+
+        h1 {
+          //   font-size: 64px;
+          //   line-height: 72px;
+          font-size: 50px;
+          line-height: 58px;
+        }
+
+        .description {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+    }
   }
 }
