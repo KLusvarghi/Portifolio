@@ -23,6 +23,7 @@ const Button = ({ children, onClick, link, referencia, size }: Props) => {
       className={classNames({
         [styles.button]: true,
         [styles.medium]: size === 'medium' ? true : false,
+        [styles.small]: size === 'small' ? true : false,
       })}
     >
       <Link href={link ? link : ''} target="_blank" replace>

@@ -34,9 +34,12 @@ export default function Intro() {
     };
   }, []);
 
+
   return (
     <main className={styles.introContainer}>
       <div className={styles.wrapper}>
+
+
         <div className={styles.wrapperSocial}>
           <div className={styles.social}>
             <Link href="https://github.com/KLusvarghi" target="_blank" replace>
@@ -65,6 +68,8 @@ export default function Intro() {
             </Link>
           </div>
         </div>
+
+
         <div className={styles.intro}>
           <div className={styles.textMain}>
             <p>E ai, eu me chamo</p>
@@ -72,7 +77,7 @@ export default function Intro() {
 
             <TypeAnimation
               sequence={[
-                'Um desenvolvedor web iniciante e focado em resultados, que constrói e gerencia sites e aplicativos web visando o resultado geral do produto',
+                'Um desenvolvedor web iniciante e focado em resultados, que constrói e gerencia sites e aplicativos web visando o resultado geral do produto.',
                 450,
                 () => setActive(true),
               ]}
@@ -83,10 +88,10 @@ export default function Intro() {
           </div>
           {active && (
             <div className={styles.btns}>
-              <Button size={width <= 1200 ? 'medium' : 'normal'}>
+              <Button size={width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'}>
                 Contato
-              </Button>
-              <Button size={width <= 1200 ? 'medium' : 'normal'}>
+              </Button >
+              <Button size={width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'}>
                 Projetos
               </Button>
             </div>
