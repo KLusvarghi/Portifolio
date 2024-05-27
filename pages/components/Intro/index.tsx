@@ -8,6 +8,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import DescriptionIcon from '@mui/icons-material/Description';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { TypeAnimation } from 'react-type-animation';
+import EjectIcon from '@mui/icons-material/Eject';
+import classNames from 'classnames';
 
 export default function Intro() {
   const [active, setActive] = useState(false);
@@ -23,7 +25,7 @@ export default function Intro() {
     // verifica se estamos no client
     // Para garantir que o código só tente acessar window.innerWidth
     if (typeof window !== 'undefined') {
-      handleResize()
+      handleResize();
     }
 
     // Adiciona o event listener para o evento de redimensionamento
@@ -34,14 +36,18 @@ export default function Intro() {
     };
   }, []);
 
-
   return (
     <main className={styles.introContainer}>
       <div className={styles.wrapper}>
-
-
         <div className={styles.wrapperSocial}>
-          <div className={styles.social}>
+          {/* <EjectIcon className={styles.showSocial} /> */}
+          {/* {width <= 380 ? <EjectIcon className={styles.showSocial}/> : ''} */}
+          <div
+            className={classNames({
+              [styles.social]: true,
+              [styles.hideSocial]: width <= 420 ? true : false,
+            })}
+          >
             <Link href="https://github.com/KLusvarghi" target="_blank" replace>
               <GitHubIcon />
             </Link>
@@ -69,7 +75,6 @@ export default function Intro() {
           </div>
         </div>
 
-
         <div className={styles.intro}>
           <div className={styles.textMain}>
             <p>E ai, eu me chamo</p>
@@ -88,10 +93,18 @@ export default function Intro() {
           </div>
           {active && (
             <div className={styles.btns}>
-              <Button size={width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'}>
+              <Button
+                size={
+                  width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'
+                }
+              >
                 Contato
-              </Button >
-              <Button size={width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'}>
+              </Button>
+              <Button
+                size={
+                  width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'
+                }
+              >
                 Projetos
               </Button>
             </div>
