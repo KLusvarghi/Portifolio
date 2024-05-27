@@ -11,12 +11,12 @@ export default function AboutMe() {
     'github',
     'sass',
     'typescript',
-    'react',
-    'git',
-    ' next.js',
-    'terminal',
-    'design responsivo',
     'ui',
+    'react',
+    'design responsivo',
+    'git',
+    'next.js',
+    'terminal',
   ];
 
   return (

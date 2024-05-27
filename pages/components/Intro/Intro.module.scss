@@ -152,7 +152,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: $bp-01) {
   .introContainer {
     .intro {
       .textMain {
@@ -175,7 +175,7 @@
   }
 }
 
-@media (max-width: 710px) {
+@media (max-width: $bp-02) {
   .introContainer {
     .intro {
       .textMain {

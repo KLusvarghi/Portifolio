@@ -8,7 +8,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import DescriptionIcon from '@mui/icons-material/Description';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { TypeAnimation } from 'react-type-animation';
-import EjectIcon from '@mui/icons-material/Eject';
+// import EjectIcon from '@mui/icons-material/Eject';
 import classNames from 'classnames';
 
 export default function Intro() {
