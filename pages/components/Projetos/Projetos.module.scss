@@ -4,7 +4,7 @@
   background: $b0;
   margin: 0;
   padding: 112px 120px 76px 120px;
-  
+
   .wrapper {
     .title {
       display: flex;
@@ -35,6 +35,49 @@
         line-height: 32px;
         max-width: 1107px;
         text-align: center;
+      }
+    }
+
+    // PROJETO
+    .content {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 68px;
+
+      .projetoContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+
+        .image {
+          flex: 1;
+        }
+
+        .description {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          // justify-content: end;
+
+          h2 {
+            font-family: $font-1;
+            font-size: 34px;
+            font-weight: 600;
+            line-height: 42px;
+            color: $c9;
+            text-transform: capitalize;
+          }
+
+          p {
+            font-family: $font-2;
+            font-size: 22px;
+            line-height: 28px;
+            color: $c7;
+          }
+        }
       }
     }
   }

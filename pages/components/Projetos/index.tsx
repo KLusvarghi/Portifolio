@@ -1,5 +1,9 @@
 import React from 'react';
 import styles from './Projetos.module.scss';
+import Image from 'next/image';
+import api from '../../apiProjetos/projetos.json';
+import Button from '../Button';
+
 
 export default function Projetos() {
   return (
@@ -13,7 +17,26 @@ export default function Projetos() {
           </p>
         </div>
 
-        <div className={styles.content}></div>
+        <div className={styles.content}>
+          {api.map((projeto, index) => (
+            <div key={index} className={styles.projetoContainer}>
+              <Image
+                className={styles.image}
+                src={projeto.image}
+                alt={`imagem ilustrativa do projeto ${projeto.nome}`}
+                width={400}
+                height={400}
+                loading="eager"
+                onError={(e) => console.error('error: ', e.target)}
+              />
+              <div className={styles.description}>
+                <h2>{projeto.nome}</h2>
+                <p>{projeto.preDescricao}</p>
+                <Button windows={true} link={projeto.linkTo} >Mais sobre</Button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
