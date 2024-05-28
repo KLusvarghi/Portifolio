@@ -10,12 +10,31 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { TypeAnimation } from 'react-type-animation';
 // import EjectIcon from '@mui/icons-material/Eject';
 import classNames from 'classnames';
-import UseWindowSize from '../windowSize';
-// import { whatsSize } from '../WindowSize';
 
 export default function Intro() {
   const [active, setActive] = useState(false);
-  const width = UseWindowSize();
+
+  const [width, setWidth] = useState(0);
+
+  // efeito para atualziar o tamanho da dela no momento atual do usuário
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    // verifica se estamos no client
+    // Para garantir que o código só tente acessar window.innerWidth
+    if (typeof window !== 'undefined') {
+      handleResize();
+    }
+
+    // Adiciona o event listener para o evento de redimensionamento
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <main className={styles.introContainer}>

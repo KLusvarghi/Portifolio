@@ -1,0 +1,41 @@
+@import '../../../src/theme/variaveis';
+
+.projetosContainer {
+  background: $b0;
+  margin: 0;
+  padding: 112px 120px 76px 120px;
+  
+  .wrapper {
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $c9;
+
+      h1 {
+        font-family: $font-1;
+        font-size: 48px;
+        line-height: 56px;
+      }
+
+      .separetor {
+        display: block;
+        height: 5px;
+        width: 32px;
+        border-radius: 5px;
+        border: 1px solid $m1;
+        background: $m1;
+        margin: 0px;
+      }
+
+      .subtitle {
+        font-family: $font-2;
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 1107px;
+        text-align: center;
+      }
+    }
+  }
+}

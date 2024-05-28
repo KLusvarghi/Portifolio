@@ -2,8 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import styles from './AboutMe.module.scss';
 import Button from '../Button';
 import Link from 'next/link';
+import UseWindowSize from '../windowSize';
 
 export default function AboutMe() {
+  const width = UseWindowSize();
+
   const technology = [
     'html',
     'css',
@@ -84,7 +87,9 @@ export default function AboutMe() {
                   </div>
                 </div>
               </div>
-              <Button>Open Cv on drive</Button>
+              <Button size={
+                  width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'
+                }>Open Cv on drive</Button>
             </div>
           </div>
           <div className={styles.skills}>

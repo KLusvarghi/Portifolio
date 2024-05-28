@@ -146,6 +146,7 @@
 }
 
 @media (max-width: $bp-01) {
+  //1200px
   .aboutContainer {
     .wrapper {
       .title {
@@ -212,12 +213,11 @@
 }
 
 @media (max-width: $bp-01-01) {
+  //940px
   .aboutContainer {
     .wrapper {
       .title {
         h1 {
-          // font-size: 48px;
-          // line-height: 56px;
           font-size: 40px;
           line-height: 48px;
         }
@@ -276,69 +276,41 @@
   }
 }
 
-
-// CONTINUARRRRR
 @media (max-width: $bp-02-02) {
+  //650px
   .aboutContainer {
+    padding: 100px 80px 76px 80px;
+
     .wrapper {
       .title {
         h1 {
-          // font-size: 48px;
-          // line-height: 56px;
           font-size: 40px;
           line-height: 48px;
         }
 
-        .separetor {
-          height: 5px;
-          width: 28px;
-        }
-
         .subtitle {
-          font-size: 20px;
-          line-height: 28px;
+          font-size: 15px;
+          line-height: 22px;
         }
       }
 
       .content {
-        flex-direction: column;
+        margin-top: 36px;
+
         .about {
-          h2 {
-            font-size: 26px;
-            line-height: 34px;
-          }
-
-          p {
-            font-size: 14px;
-            line-height: 20px;
-          }
-
           .itens {
-            .expirience {
-              p {
-                font-size: 14px;
-                line-height: 20px;
-              }
-            }
-          }
-        }
-
-        .skills {
-          h2 {
-            font-size: 26px;
-            line-height: 34px;
-          }
-
-          .hardSkills {
-            gap: 12px;
-            span {
-              font-size: 14px;
-              line-height: 20px;
-              padding: 6px 10px;
-            }
+            flex-direction: column;
+            align-items: start;
           }
         }
       }
     }
+  }
+}
+
+@media (max-width: $bp-03) {
+  //440px
+  .aboutContainer {
+    padding: 100px 60px 76px 60px;
   }
 }

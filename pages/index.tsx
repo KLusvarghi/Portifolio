@@ -5,6 +5,7 @@ import Footer from './components/Foooter';
 import Head from './infra/components/Head';
 import Intro from './components/Intro';
 import AboutMe from './components/AboutMe';
+import Projetos from './components/Projetos';
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <Header />
       <Intro/>
       <AboutMe/>
-      <main>Hellow</main>
+      <Projetos/>
       <Footer />
     </div>
   );
