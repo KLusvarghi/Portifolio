@@ -1,9 +1,9 @@
+// index.tsx
 import React from 'react';
 import styles from './Projetos.module.scss';
 import Image from 'next/image';
 import api from '../../apiProjetos/projetos.json';
 import Button from '../Button';
-
 
 export default function Projetos() {
   return (
@@ -32,7 +32,15 @@ export default function Projetos() {
               <div className={styles.description}>
                 <h2>{projeto.nome}</h2>
                 <p>{projeto.preDescricao}</p>
-                <Button windows={true} link={projeto.linkTo} >Mais sobre</Button>
+                {/* <Link href={projeto.linkTo}>Mais sobre</Link> */}
+                <Button
+                  windows={true}
+                  link={projeto.linkTo}
+                  data='conteudo sendo passado'
+                  // propsProjeto={projeto}
+                >
+                  Mais sobre
+                </Button>
               </div>
             </div>
           ))}

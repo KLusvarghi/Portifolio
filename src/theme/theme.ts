@@ -10,7 +10,6 @@ const roboto = Roboto({
 
 const poppins = Poppins({
   weight: ['500'],
-  // lineHeight: 32px
   subsets: ['latin'],
   display: 'swap',
 });

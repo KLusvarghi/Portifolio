@@ -7,7 +7,7 @@
     "site": "https://sorteador-de-amigo-secreto-five.vercel.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/Sorteador-De-Amigo-Secreto",
     "image": "./svgProjetos/sorteador.svg",
-    "linkTo": "http://localhost:3001/Sorteador-de-amigo-secreto"
+    "linkTo": "Projetos/Sorteador"
   },
   {
     "nome": "cardápio aluroni",
@@ -17,7 +17,7 @@
     "site": "https://cardapio-aluroni.vercel.app/cardapio",
     "linkRepositorio": "https://github.com/KLusvarghi/cardapio-aluroni-2.0",
     "image": "./svgProjetos/aluroni.svg",
-    "linkTo": "http://localhost:3001/cardapio-aluroni"
+    "linkTo": "Projetos/cardapio-aluroni"
   },
   {
     "nome": "dogs",
@@ -27,76 +27,66 @@
     "site": "https://dogsapp-eight.vercel.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/dogs",
     "image": "./svgProjetos/dogs.svg",
-    "linkTo": "http://localhost:3001/dogs"
+    "linkTo": "Projetos/dogs"
   },
   {
     "nome": "alura cases",
-    "preDescricao": "",
+    "preDescricao": "Por meio de técnicas avançadas, como pré-renderização, lazy loading e outras estratégias de otimização, busca-se maximizar a eficiência e a velocidade de carregamento dos aplicativos, proporcionando uma experiência de uso superior para os usuários.",
     "descricao": "Alura Cases é um projeto modesto composto por duas páginas, elaborado com o auxílio do Next.js e conduzido por Mario Solto durante o curso de Next.js: Explorando o Framework da Alura. Este projeto destaca-se pela sua simplicidade e eficácia na implementação de conceitos fundamentais do Next.js. A utilização do sistema de roteamento dinâmico do Next.js possibilita a criação de páginas dinâmicas e reutilizáveis, proporcionando uma experiência de navegação fluida e intuitiva para os usuários. Além disso, a integração da renderização ao lado do servidor (SSR) contribui para uma resposta rápida e eficiente, melhorando significativamente a experiência do usuário. A otimização e performance são elementos essenciais neste projeto, destacando-se como pontos-chave na utilização do Next.js. Por meio de técnicas avançadas, como pré-renderização, lazy loading e outras estratégias de otimização, busca-se maximizar a eficiência e a velocidade de carregamento dos aplicativos, proporcionando uma experiência de uso superior para os usuários.",
     "tecnologias": ["next.js", "typescript", "css"],
     "site": "https://alura-cases-xi.vercel.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/AluraCases-Next.js",
     "image": "./svgProjetos/aluraCases.svg",
-    "linkTo": "http://localhost:3001/alura-cases"
+    "linkTo": "Projetos/alura-cases"
   },
   {
     "nome": "cronometro de afazeres",
-    "preDescricao": "",
+    "preDescricao": "O Cronômetro de Afazeres é um projeto que se encarrega de adicionar tarefas a uma lista. Quando o usuário decide iniciar o cronômetro, ele começa a contar a partir do horário atual, e ao término do tempo estipulado, a tarefa é automaticamente movida para uma lista de tarefas concluídas",
     "descricao": "O Cronômetro de Afazeres é um projeto que se encarrega de adicionar tarefas a uma lista, cada uma com um prazo determinado de até 23:59:59. Quando o usuário decide iniciar o cronômetro, ele começa a contar a partir do horário atual, e ao término do tempo estipulado, a tarefa é automaticamente movida para uma lista de tarefas concluídas. Este projeto foi desenvolvido como parte do curso de React com TypeScript, oferecido pela Alura e ministrado com maestria pelo instrutor Luiz Fernando Ribeiro.",
     "tecnologias": ["typescript", "react", "sass"],
     "site": "https://cronometro-de-afazeres.vercel.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/Cronometro-de-afazeres",
     "image": "./svgProjetos/cronometro.svg",
-    "linkTo": "http://localhost:3001/cronometro-de-afazeres"
+    "linkTo": "/cronometro-de-afazeres"
   },
   {
     "nome": "animais fantásticos",
-    "preDescricao": "",
+    "preDescricao": "Neste projeto são discutidos conceitos essenciais de responsividade, acessibilidade e melhores práticas de desenvolvimento web, melhorando significativamente a qualidade e a usabilidade do projeto final.",
     "descricao": "O projeto 'Animais Fantásticos' é uma criação colaborativa com o instrutor André da Origamid, no qual uma ampla gama de recursos oferecidos pelo JavaScript é explorada. Com uma atenção meticulosa ao UX (Experiência do Usuário) e UI (Interface do Usuário), o site é habilmente estilizado para garantir uma experiência agradável em diversos dispositivos, adaptando-se de forma responsiva. Durante o desenvolvimento, são implementadas animações envolventes e interações dinâmicas, juntamente com a integração fluida de mídia, como imagens e vídeos. Adicionalmente, são abordados conceitos fundamentais de responsividade, acessibilidade e as melhores práticas de desenvolvimento web, elevando ainda mais a qualidade e a usabilidade do projeto final.",
     "tecnologias": ["javascript", "html", "css"],
     "site": "https://fantasticos-animais.netlify.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/Animais-Fantasticos",
     "image": "./svgProjetos/animaisFantasticos.svg",
-    "linkTo": "http://localhost:3001/animais-fantasticos"
+    "linkTo": "/animais-fantasticos"
   },
   {
     "nome": "bikcraft",
-    "preDescricao": "",
+    "preDescricao": "A Bikcraft é uma página de destino elaborada em colaboração com o instrutor André, fundador da Origamid. Esta página tem como objetivo educacional explorar os recursos-chave do HTML e CSS, com ênfase especial no CSS Flexbox e Grid.",
     "descricao": "A Bikcraft é uma página de destino elaborada em colaboração com o instrutor André, fundador da Origamid. Esta página tem como objetivo educacional explorar os recursos-chave do HTML e CSS, com ênfase especial no CSS Flexbox e Grid.",
     "tecnologias": ["javascript", "html", "css"],
     "site": "https://bikcraftlandingpage.netlify.app/sobre",
     "linkRepositorio": "https://github.com/KLusvarghi/Bikcraft",
     "image": "./svgProjetos/bikcraft.svg",
-    "linkTo": "http://localhost:3001/bikcraft"
+    "linkTo": "/bikcraft"
   },
   {
     "nome": "wildbeast",
-    "preDescricao": "",
+    "preDescricao": "A Wildbeast é uma landing page desenvolvida onde o propósito principal dessa página é focando na exploração dos recursos essenciais do HTML e CSS. Em particular, destaca-se o CSS Flexbox como uma das áreas de enfoque principal do projeto.",
     "descricao": "A Wildbeast é uma landing page desenvolvida em parceria com o instrutor André, que lidera a Origamid. O propósito principal dessa página é oferecer uma experiência educacional, focando na exploração dos recursos essenciais do HTML e CSS. Em particular, destaca-se o CSS Flexbox como uma das áreas de enfoque principal deste projeto colaborativo.",
     "tecnologias": ["javascript", "html", "css"],
     "site": "https://projectwildbeast.netlify.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/Wildbeast-site",
     "image": "./svgProjetos/wildbeast.svg",
-    "linkTo": "http://localhost:3001/wildbeast"
+    "linkTo": "/wildbeast"
   },
   {
     "nome": "slides",
-    "preDescricao": "",
+    "preDescricao": "Neste projeto é explorado as funcionalidades de slides, possibilitando a navegação tanto por meio das setas direcionais quanto pelo movimento de arrastar o mouse (on drag).",
     "descricao": "O projeto Slides foi desenvolvido junto com o professor André, proprietário e instrutor da plataforma educacional Origamid. Neste projeto, foram exploradas as funcionalidades de slides, possibilitando a navegação tanto por meio das setas direcionais quanto pelo movimento de arrastar o mouse (on drag).",
     "tecnologias": ["javascript", "html", "css"],
     "site": "https://slides-funcionalidadejs.netlify.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/Slides-FuncionalidadeJS",
     "image": "./svgProjetos/slides.svg",
-    "linkTo": "http://localhost:3001/slides"
-  },
-  {
-    "nome": "alfood",
-    "preDescricao": "",
-    "descricao": "",
-    "tecnologias": ["typescript", "html", "scss"],
-    "site": "https://projeto-alfood.vercel.app/",
-    "linkRepositorio": "https://github.com/KLusvarghi/Projeto-Alfood",
-    "image": "./svgProjetos/alfood.svg",
-    "linkTo": "http://localhost:3001/alfood"
-  }
+    "linkTo": "/slides"
+  }  
 ]

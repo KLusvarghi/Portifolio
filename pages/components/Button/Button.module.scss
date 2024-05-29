@@ -21,12 +21,11 @@
     border-radius: 5px;
     border: 2px solid $m1;
 
-    color: $c2;
+    color: $c2 !important;
     background-color: $m1;
-
     &:hover {
-      box-shadow: inset 300px 0 0 0 $c2;
-      color: $m1;
+      box-shadow: inset 300px 0 0 0 $c1;
+      color: $m1 !important;
     }
   }
 }

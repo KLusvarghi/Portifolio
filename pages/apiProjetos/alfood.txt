@@ -1,0 +1,10 @@
+{
+    "nome": "alfood",
+    "preDescricao": "",
+    "descricao": "",
+    "tecnologias": ["typescript", "html", "scss"],
+    "site": "https://projeto-alfood.vercel.app/",
+    "linkRepositorio": "https://github.com/KLusvarghi/Projeto-Alfood",
+    "image": "./svgProjetos/alfood.svg",
+    "linkTo": "http://localhost:3001/alfood"
+  }
