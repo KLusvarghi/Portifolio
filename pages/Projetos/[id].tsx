@@ -95,18 +95,17 @@ export default function Projetos({ params }: { params: { id: string } }) {
               <h2>Projeto</h2>
               <div className={styles.containerBtns}>
                 <Button link={project?.site} upperCase={true}>
-                  {' '}
-                  ver projeto
+                  VER PROJETO
                 </Button>
                 <Button
                   link={project?.linkRepositorio}
                   upperCase={true}
                   type="transparent"
                 >
-                  repositório
+                  REPOSITÓRIO
                 </Button>
                 <Button upperCase={true} onClick={() => navigationToBack()}>
-                  voltar
+                  VOLTAR
                 </Button>
               </div>
             </div>

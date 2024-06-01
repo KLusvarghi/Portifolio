@@ -45,11 +45,9 @@
     }
 
 
-
-
     .content{
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       .info{
         display: flex;
         flex-direction: column;

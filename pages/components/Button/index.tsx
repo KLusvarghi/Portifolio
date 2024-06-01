@@ -65,7 +65,6 @@ const Button = ({
       {newWindow || ref ? (
         <div
           className={classNames({
-            [styles.upperCase]: upperCase,
             [styles.button]: true,
             [styles.medium]: size === 'medium',
             [styles.small]: size === 'small',
