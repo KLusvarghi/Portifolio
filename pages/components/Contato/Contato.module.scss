@@ -1,0 +1,105 @@
+@import '../../../src/theme/variaveis';
+
+.contatoContainer {
+  margin: 0;
+  padding: 112px 120px 76px 120px;
+  background-image: url('./../../../public/background/bgDown.svg');
+  position: relative;
+  // height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .wrapper {
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $c9;
+      margin-bottom: 80px;
+
+      h1 {
+        font-family: $font-1;
+        font-size: 48px;
+        line-height: 56px;
+      }
+
+      .separetor {
+        display: block;
+        height: 5px;
+        width: 32px;
+        border-radius: 5px;
+        border: 1px solid $m1;
+        background: $m1;
+        margin: 0px;
+      }
+
+      .subtitle {
+        font-family: $font-2;
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 1107px;
+        text-align: center;
+      }
+    }
+
+
+
+
+    .content{
+      display: flex;
+      justify-content: space-between;
+      .info{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        .about{
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          gap: 12px;
+       
+          .icon{
+            height: 58px;
+            width: 46px;
+            color: $m1;
+          }
+
+          .text{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h4{
+              margin: 0;
+              font-family: $font-2;
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 14px;
+              color: $c7;
+            }
+
+            p{
+              margin: 0;
+
+              font-family: $font-2;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 10px;
+              color: $c7;
+            }
+          }
+        }
+      }
+
+
+
+
+      .form{
+
+      }
+    }
+  }
+}

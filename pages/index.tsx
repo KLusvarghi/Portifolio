@@ -5,6 +5,7 @@ import Head from './infra/components/Head';
 import Intro from './components/Intro';
 import AboutMe from './components/AboutMe';
 import Projetos from './components/Projetos';
+import Contato from './components/Contato';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Intro />
       <AboutMe />
       <Projetos />
+      <Contato/>
       <Footer />
     </main>
   );

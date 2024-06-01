@@ -4,7 +4,6 @@ import Image from 'next/image';
 import styles from './Header.module.scss';
 import classNames from 'classnames';
 import { Link } from 'react-scroll';
-import LinkNext from 'next/link';
 
 export default function Header() {
   const [toggle, setToggle] = useState(false);
