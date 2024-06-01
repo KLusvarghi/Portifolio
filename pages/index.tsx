@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Foooter';
-import Head from './infra/components/Head';
+import Head from './Helper/Head';
 import Intro from './components/Intro';
 import AboutMe from './components/AboutMe';
 import Projetos from './components/Projetos';
@@ -16,7 +16,7 @@ export default function Home() {
       <Intro />
       <AboutMe />
       <Projetos />
-      <Contato/>
+      <Contato />
       <Footer />
     </main>
   );

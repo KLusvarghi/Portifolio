@@ -3,7 +3,7 @@ import styles from './Contato.module.scss';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import Forms from './forms';
+import Forms from './Form';
 
 export default function Contato() {
   return (
@@ -21,30 +21,29 @@ export default function Contato() {
         <div className={styles.content}>
           <div className={styles.info}>
             <div className={styles.about}>
-              <LocationOnIcon className={styles.icon}/>
+              <LocationOnIcon className={styles.icon} />
               <div className={styles.text}>
                 <h4>Localização</h4>
                 <p>Praia Grande - Litoral Sul - SP</p>
               </div>
             </div>
             <div className={styles.about}>
-              <EmailIcon className={styles.icon}/>
+              <EmailIcon className={styles.icon} />
               <div className={styles.text}>
                 <h4>Email</h4>
                 <p>kauaolusvarghi@gmail.com</p>
               </div>
             </div>
             <div className={styles.about}>
-              <LocalPhoneIcon className={styles.icon}/>
+              <LocalPhoneIcon className={styles.icon} />
               <div className={styles.text}>
                 <h4>Telefone / whatsapp</h4>
                 <p>+55 (13)99606-8207</p>
               </div>
             </div>
-
           </div>
           <div className={styles.form}>
-            <Forms/>
+            <Forms />
           </div>
         </div>
       </div>

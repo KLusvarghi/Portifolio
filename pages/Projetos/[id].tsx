@@ -9,6 +9,7 @@ import styles from './Projeto.module.scss';
 import Image from 'next/image';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Button from '../components/Button';
+import Head from '../Helper/Head';
 
 interface ProjetoInterface {
   id: number;
@@ -49,11 +50,15 @@ export default function Projetos({ params }: { params: { id: string } }) {
 
   return (
     <>
+      <Head title={`Projeto - ${project?.nome}`} />
       <Header />
       <main className={styles.projectContainer}>
         <div className={styles.wrapper}>
           <div>
-            <ArrowBackIcon className={styles.ArrowBack} onClick={() => navigationToBack()}/>
+            <ArrowBackIcon
+              className={styles.ArrowBack}
+              onClick={() => navigationToBack()}
+            />
             <div className={styles.title}>
               <h1>{project?.nome}</h1>
               {project ? (
@@ -89,9 +94,20 @@ export default function Projetos({ params }: { params: { id: string } }) {
             <div className={styles.btns}>
               <h2>Projeto</h2>
               <div className={styles.containerBtns}>
-                <Button link={project?.site} upperCase={true}> ver projeto</Button>
-                <Button link={project?.linkRepositorio} upperCase={true} type="transparent">repositório</Button>
-                <Button upperCase={true} onClick={() => navigationToBack()}>voltar</Button>
+                <Button link={project?.site} upperCase={true}>
+                  {' '}
+                  ver projeto
+                </Button>
+                <Button
+                  link={project?.linkRepositorio}
+                  upperCase={true}
+                  type="transparent"
+                >
+                  repositório
+                </Button>
+                <Button upperCase={true} onClick={() => navigationToBack()}>
+                  voltar
+                </Button>
               </div>
             </div>
           </div>

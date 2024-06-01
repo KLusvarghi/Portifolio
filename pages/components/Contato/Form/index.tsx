@@ -1,15 +1,56 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Forms.module.scss';
+import emailjs from '@emailjs/browser';
+import classNames from 'classnames';
+import Error from '../../../Helper/Error';
 
 const Forms = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [sucess, setSucces] = useState(false);
 
   const sedEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    try {
+    } catch (error) {}
+    if (name === '' || email === '' || subject === '' || message === '') {
+      setError(true);
+    } else {
+      setLoading(true);
+      const templateParams = {
+        name: name,
+        subject: subject,
+        message: message,
+        email: email,
+      };
+      setError(false);
+      emailjs
+        .send(
+          'service_9yq346d',
+          'template_fze75s6',
+          templateParams,
+          'RogZHWFmgc7vGw9e2',
+        )
+        .then(
+          (response) => {
+            console.log(response.text);
+            console.log(response.status);
+          },
+          (error) => {
+            console.log(error.text);
+          },
+        );
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+      setLoading(false);
+    }
   };
 
   return (
@@ -57,7 +98,20 @@ const Forms = () => {
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
         </div>
-        <button>Enviar mensagem</button>
+        {error && <Error error={error} />}
+        {loading ? (
+          <button
+            className={classNames({
+              [styles.loading]: true,
+              [styles.btn]: true,
+            })}
+            disabled
+          >
+            Enviando mensagem...
+          </button>
+        ) : (
+          <button className={styles.btn}>Enviar mensagem</button>
+        )}
       </form>
     </main>
   );
