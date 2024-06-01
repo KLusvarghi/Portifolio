@@ -1,92 +1,101 @@
 [
   {
+    "id": 1,
     "nome": "sorteador de amigo secreto",
     "preDescricao": "O Sorteador de Amigo Secreto é uma aplicação que torna o sorteio de amigo secreto mais prático, rápido e adequado ao ambiente digital atual.",
-    "descricao": "O Sorteador de Amigo Secreto é uma aplicação desenvolvida com o propósito de viabilizar a realização do tradicional sorteio de amigo secreto de maneira exponencialmente mais prática, ágil e adaptada ao ambiente digital contemporâneo. Este inovador aplicativo foi concebido levando-se primordialmente em consideração a necessidade de eliminar por completo qualquer possibilidade de duplicidade de nomes ou de jogadores distintos se sortearem mutuamente. Esse desafio é abordado com extrema meticulosidade por meio de um algoritmo robusto e criteriosamente planejado, que opera nos bastidores para garantir a integridade e a equidade do processo de sorteio.",
+    "descricao": "O Sorteador de Amigo Secreto é uma aplicação desenvolvida com o propósito de viabilizar a realização do tradicional sorteio de amigo secreto de maneira exponencialmente mais prática, ágil e adaptada ao ambiente digital contemporâneo.Este inovador aplicativo foi concebido levando-se primordialmente em consideração a necessidade de eliminar por completo qualquer possibilidade de duplicidade de nomes ou de jogadores distintos se sortearem mutuamente. Esse desafio é abordado com extrema meticulosidade por meio de um algoritmo robusto e criteriosamente planejado, que opera nos bastidores para garantir a integridade e a equidade do processo de sorteio.",
     "tecnologias": ["typescript", "react", "sass"],
     "site": "https://sorteador-de-amigo-secreto-five.vercel.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/Sorteador-De-Amigo-Secreto",
-    "image": "./svgProjetos/sorteador.svg",
-    "linkTo": "Projetos/Sorteador"
+    "image": "/svgProjetos/sorteador.svg",
+    "linkTo": "Projetos/Sorteador-de-amigo-secreto"
   },
   {
+    "id": 2,
     "nome": "cardápio aluroni",
     "preDescricao": "O projeto de cardápio permite aos usuários realizar buscas e filtrar o tipo de comida desejada, seja por preço, porção ou quantidade de pessoas atendidas. Desenvolvido com React e TypeScript, o objetivo é fornecer uma tipagem precisa para a linguagem, garantindo uma experiência mais segura e eficiente.",
     "descricao": "O Cardápio Aluroni desenvolvido junto ao professor Luiz Fernando Ribeiro, durante o curso de React, com uma ênfase especial no módulo de 'Lidando com Arquivos Estáticos' da alura. Neste projeto, mergulhamos profundamente na essência de como lidar com arquivos estáticos, reconhecendo sua importância crítica para garantir a entrega eficiente e confiável de recursos essenciais. Utilizando técnicas avançadas para otimizar a performance e a acessibilidade do site, assegurando que os estilos visuais sejam polidos e os scripts interativos estejam fluidos. O Cardápio Aluroni transcende a mera funcionalidade, pois busca proporcionar uma experiência de uso verdadeiramente envolvente e gratificante. Ao entregar recursos de forma rápida e confiável, não apenas cumprimos os objetivos do projeto, mas também elevamos os padrões de excelência no desenvolvimento web.",
     "tecnologias": ["typescript", "react", "sass"],
     "site": "https://cardapio-aluroni.vercel.app/cardapio",
     "linkRepositorio": "https://github.com/KLusvarghi/cardapio-aluroni-2.0",
-    "image": "./svgProjetos/aluroni.svg",
+    "image": "/svgProjetos/aluroni.svg",
     "linkTo": "Projetos/cardapio-aluroni"
   },
   {
+    "id": 3,
     "nome": "dogs",
     "preDescricao": "Dogs é uma rede social dedicada aos animais de estimação, indo além do convencional. Desde um cativante feed de fotos até funcionalidades essenciais como registro, login e compartilhamento de imagens dos nossos companheiros peludos.",
     "descricao": "O Projeto Dogs floresceu em colaboração com o professor André Rafael, através da plataforma educacional Origamid, durante o curso de React. Esta jornada foi marcada por uma imersão profunda na construção de uma aplicação completa, abraçando todos os elementos do desenvolvimento em React e suas bibliotecas associadas. Nossa visão abraçou a criação de uma rede social sofisticada, dedicada aos nossos queridos amigos de quatro patas, transcendo os limites do comum. Desde um envolvente feed repleto de imagens caninas até a implementação de funcionalidades fundamentais como registro, login e a capacidade de compartilhar fotos de nossos leais companheiros.",
-    "tecnologias": ["javascript", "react", "css"],
+    "tecnologias": ["javascript", "react", "CSS"],
     "site": "https://dogsapp-eight.vercel.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/dogs",
-    "image": "./svgProjetos/dogs.svg",
+    "image": "/svgProjetos/dogs.svg",
     "linkTo": "Projetos/dogs"
   },
   {
+    "id": 4,
     "nome": "alura cases",
     "preDescricao": "Por meio de técnicas avançadas, como pré-renderização, lazy loading e outras estratégias de otimização, busca-se maximizar a eficiência e a velocidade de carregamento dos aplicativos, proporcionando uma experiência de uso superior para os usuários.",
     "descricao": "Alura Cases é um projeto modesto composto por duas páginas, elaborado com o auxílio do Next.js e conduzido por Mario Solto durante o curso de Next.js: Explorando o Framework da Alura. Este projeto destaca-se pela sua simplicidade e eficácia na implementação de conceitos fundamentais do Next.js. A utilização do sistema de roteamento dinâmico do Next.js possibilita a criação de páginas dinâmicas e reutilizáveis, proporcionando uma experiência de navegação fluida e intuitiva para os usuários. Além disso, a integração da renderização ao lado do servidor (SSR) contribui para uma resposta rápida e eficiente, melhorando significativamente a experiência do usuário. A otimização e performance são elementos essenciais neste projeto, destacando-se como pontos-chave na utilização do Next.js. Por meio de técnicas avançadas, como pré-renderização, lazy loading e outras estratégias de otimização, busca-se maximizar a eficiência e a velocidade de carregamento dos aplicativos, proporcionando uma experiência de uso superior para os usuários.",
-    "tecnologias": ["next.js", "typescript", "css"],
+    "tecnologias": ["next.js", "typescript", "CSS"],
     "site": "https://alura-cases-xi.vercel.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/AluraCases-Next.js",
-    "image": "./svgProjetos/aluraCases.svg",
+    "image": "/svgProjetos/aluraCases.svg",
     "linkTo": "Projetos/alura-cases"
   },
   {
+    "id": 5,
     "nome": "cronometro de afazeres",
     "preDescricao": "O Cronômetro de Afazeres é um projeto que se encarrega de adicionar tarefas a uma lista. Quando o usuário decide iniciar o cronômetro, ele começa a contar a partir do horário atual, e ao término do tempo estipulado, a tarefa é automaticamente movida para uma lista de tarefas concluídas",
     "descricao": "O Cronômetro de Afazeres é um projeto que se encarrega de adicionar tarefas a uma lista, cada uma com um prazo determinado de até 23:59:59. Quando o usuário decide iniciar o cronômetro, ele começa a contar a partir do horário atual, e ao término do tempo estipulado, a tarefa é automaticamente movida para uma lista de tarefas concluídas. Este projeto foi desenvolvido como parte do curso de React com TypeScript, oferecido pela Alura e ministrado com maestria pelo instrutor Luiz Fernando Ribeiro.",
     "tecnologias": ["typescript", "react", "sass"],
     "site": "https://cronometro-de-afazeres.vercel.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/Cronometro-de-afazeres",
-    "image": "./svgProjetos/cronometro.svg",
-    "linkTo": "/cronometro-de-afazeres"
+    "image": "/svgProjetos/cronometro.svg",
+    "linkTo": "Projetos/cronometro-de-afazeres"
   },
   {
+    "id": 6,
     "nome": "animais fantásticos",
     "preDescricao": "Neste projeto são discutidos conceitos essenciais de responsividade, acessibilidade e melhores práticas de desenvolvimento web, melhorando significativamente a qualidade e a usabilidade do projeto final.",
     "descricao": "O projeto 'Animais Fantásticos' é uma criação colaborativa com o instrutor André da Origamid, no qual uma ampla gama de recursos oferecidos pelo JavaScript é explorada. Com uma atenção meticulosa ao UX (Experiência do Usuário) e UI (Interface do Usuário), o site é habilmente estilizado para garantir uma experiência agradável em diversos dispositivos, adaptando-se de forma responsiva. Durante o desenvolvimento, são implementadas animações envolventes e interações dinâmicas, juntamente com a integração fluida de mídia, como imagens e vídeos. Adicionalmente, são abordados conceitos fundamentais de responsividade, acessibilidade e as melhores práticas de desenvolvimento web, elevando ainda mais a qualidade e a usabilidade do projeto final.",
-    "tecnologias": ["javascript", "html", "css"],
+    "tecnologias": ["javascript", "html", "CSS"],
     "site": "https://fantasticos-animais.netlify.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/Animais-Fantasticos",
-    "image": "./svgProjetos/animaisFantasticos.svg",
-    "linkTo": "/animais-fantasticos"
+    "image": "/svgProjetos/animaisFantasticos.svg",
+    "linkTo": "Projetos/animais-fantasticos"
   },
   {
+    "id": 7,
     "nome": "bikcraft",
     "preDescricao": "A Bikcraft é uma página de destino elaborada em colaboração com o instrutor André, fundador da Origamid. Esta página tem como objetivo educacional explorar os recursos-chave do HTML e CSS, com ênfase especial no CSS Flexbox e Grid.",
     "descricao": "A Bikcraft é uma página de destino elaborada em colaboração com o instrutor André, fundador da Origamid. Esta página tem como objetivo educacional explorar os recursos-chave do HTML e CSS, com ênfase especial no CSS Flexbox e Grid.",
-    "tecnologias": ["javascript", "html", "css"],
+    "tecnologias": ["javascript", "html", "CSS"],
     "site": "https://bikcraftlandingpage.netlify.app/sobre",
     "linkRepositorio": "https://github.com/KLusvarghi/Bikcraft",
-    "image": "./svgProjetos/bikcraft.svg",
-    "linkTo": "/bikcraft"
+    "image": "/svgProjetos/bikcraft.svg",
+    "linkTo": "Projetos/bikcraft"
   },
   {
+    "id": 8,
     "nome": "wildbeast",
     "preDescricao": "A Wildbeast é uma landing page desenvolvida onde o propósito principal dessa página é focando na exploração dos recursos essenciais do HTML e CSS. Em particular, destaca-se o CSS Flexbox como uma das áreas de enfoque principal do projeto.",
     "descricao": "A Wildbeast é uma landing page desenvolvida em parceria com o instrutor André, que lidera a Origamid. O propósito principal dessa página é oferecer uma experiência educacional, focando na exploração dos recursos essenciais do HTML e CSS. Em particular, destaca-se o CSS Flexbox como uma das áreas de enfoque principal deste projeto colaborativo.",
-    "tecnologias": ["javascript", "html", "css"],
+    "tecnologias": ["javascript", "html", "CSS"],
     "site": "https://projectwildbeast.netlify.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/Wildbeast-site",
-    "image": "./svgProjetos/wildbeast.svg",
-    "linkTo": "/wildbeast"
+    "image": "/svgProjetos/wildbeast.svg",
+    "linkTo": "Projetos/wildbeast"
   },
   {
+    "id": 9,
     "nome": "slides",
     "preDescricao": "Neste projeto é explorado as funcionalidades de slides, possibilitando a navegação tanto por meio das setas direcionais quanto pelo movimento de arrastar o mouse (on drag).",
     "descricao": "O projeto Slides foi desenvolvido junto com o professor André, proprietário e instrutor da plataforma educacional Origamid. Neste projeto, foram exploradas as funcionalidades de slides, possibilitando a navegação tanto por meio das setas direcionais quanto pelo movimento de arrastar o mouse (on drag).",
-    "tecnologias": ["javascript", "html", "css"],
+    "tecnologias": ["javascript", "html", "CSS"],
     "site": "https://slides-funcionalidadejs.netlify.app/",
     "linkRepositorio": "https://github.com/KLusvarghi/Slides-FuncionalidadeJS",
-    "image": "./svgProjetos/slides.svg",
-    "linkTo": "/slides"
+    "image": "/svgProjetos/slides.svg",
+    "linkTo": "Projetos/slides"
   }  
 ]

@@ -1,0 +1,114 @@
+@import '../../src/theme/variaveis';
+
+.projectContainer {
+  background: $b0;
+  margin: 0;
+  padding: 112px 300px 76px 300px;
+  // height: 100vh;
+
+  .wrapper {
+    .ArrowBack {
+      align-self: flex-start;
+      // position: relative;
+      color: $c12;
+      top: 50px;
+      cursor: pointer;
+      margin: 10px;
+      transition: .2s;
+
+      &:hover{
+        transform: scale(1.2);
+      }
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $c9;
+
+      h1 {
+        line-height: 0px;
+        text-transform: capitalize;
+        font-family: $font-1;
+        color: $c10;
+        font-size: 48px;
+      }
+    }
+
+    .content {
+      .description {
+        margin-bottom: 60px;
+
+        h2 {
+          text-transform: capitalize;
+          font-family: $font-1;
+          font-size: 34px;
+          line-height: 42px;
+          color: $c9;
+        }
+
+        p {
+          font-family: $font-2;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 28px;
+          color: $c8;
+        }
+      }
+
+      .tecnologias {
+        margin-bottom: 60px;
+
+        h2 {
+          text-transform: capitalize;
+          font-family: $font-1;
+          font-size: 34px;
+          line-height: 42px;
+          color: $c9;
+        }
+
+        .containerTec {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+
+          .tec {
+            background-color: $m1;
+            border: 1px solid $m1;
+            border-radius: 5px;
+            padding: 8px 12px;
+            color: $c2;
+            text-transform: capitalize;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 30%);
+
+          }
+        }
+      }
+
+      .btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+        h2 {
+          text-transform: capitalize;
+          font-family: $font-1;
+          font-size: 34px;
+          // line-height: 42px;
+          line-height: 0px;
+          color: $c9;
+        }
+
+        .containerBtns{
+          height: auto;
+          margin: 0px;
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
-import { AppCacheProvider } from '@mui/material-nextjs/v14-pagesRouter';
+import { ProjectProvider } from '../../pages/context/ProjectContext';
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
@@ -15,11 +15,11 @@ export default function MyApp(props: AppProps) {
   }, []);
 
   return (
-    <AppCacheProvider {...props}>
+    <ProjectProvider>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-
-    </AppCacheProvider>
+      <Component {...pageProps} />
+    </ProjectProvider>
   );
 }

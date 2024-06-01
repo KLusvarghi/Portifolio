@@ -87,9 +87,14 @@ export default function AboutMe() {
                   </div>
                 </div>
               </div>
-              <Button size={
+              <Button
+                size={
                   width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'
-                }>Open Cv on drive</Button>
+                }
+                link="https://drive.google.com/file/d/15YoWCl9BiAazKIh6NmqVAz5L0EMGUd0o/view?usp=sharing"
+              >
+                Open Cv on drive
+              </Button>
             </div>
           </div>
           <div className={styles.skills}>

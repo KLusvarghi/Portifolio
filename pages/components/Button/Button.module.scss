@@ -1,5 +1,10 @@
 @import '../../../src/theme/variaveis';
 
+.upperCase{
+  
+  text-transform: uppercase;
+}
+
 .button {
   margin-top: 40px;
   display: flex;
@@ -26,6 +31,54 @@
     &:hover {
       box-shadow: inset 300px 0 0 0 $c1;
       color: $m1 !important;
+    }
+  }
+
+  .boxTransp{
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+
+    font: $font-1;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+
+    padding: 16px 32px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+
+    color: $m1 !important;
+    // background-color: $m1;
+    &:hover {
+      border: 2px solid $m1;
+      // box-shadow: inset 300px 0 0 0 $m1;
+      // color: $c2 !important;
+    }
+  }
+
+  .boxOutline{
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+
+    font: $font-1;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+
+    padding: 16px 32px;
+    border-radius: 5px;
+    border: 2px solid $m1;
+
+    color: $m1 !important;
+    &:hover {
+      box-shadow: inset 300px 0 0 0 $m1;
+      color: $c2 !important;
     }
   }
 }

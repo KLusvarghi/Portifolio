@@ -12,9 +12,9 @@ export default function Home() {
     <main>
       <Head title="Home - Portifólio Kauã Ortolani Lusvarghi" />
       <Header />
-      <Intro/>
-      <AboutMe/>
-      <Projetos/>
+      <Intro />
+      <AboutMe />
+      <Projetos />
       <Footer />
     </main>
   );

@@ -1,11 +1,20 @@
 // index.tsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Projetos.module.scss';
 import Image from 'next/image';
-import api from '../../apiProjetos/projetos.json';
+import api from '../../api/projetos.json';
 import Button from '../Button';
+import { useProject } from '../../context/ProjectContext';
+import UseWindowSize from '../windowSize';
 
 export default function Projetos() {
+  const width = UseWindowSize();
+  const { setProject } = useProject();
+
+  // useEffect(() => {
+  //   setProject(api);
+  // }, [setProject])
+
   return (
     <main className={styles.projetosContainer}>
       <div className={styles.wrapper}>
@@ -32,12 +41,13 @@ export default function Projetos() {
               <div className={styles.description}>
                 <h2>{projeto.nome}</h2>
                 <p>{projeto.preDescricao}</p>
-                {/* <Link href={projeto.linkTo}>Mais sobre</Link> */}
                 <Button
-                  windows={true}
+                  newWindow={true}
                   link={projeto.linkTo}
-                  data='conteudo sendo passado'
-                  // propsProjeto={projeto}
+                  projeto={projeto}
+                  size={
+                    width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'
+                  }
                 >
                   Mais sobre
                 </Button>

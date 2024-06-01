@@ -1,10 +1,18 @@
 // context/ProjectContext.tsx
+'use client';
+
 import { createContext, useState, useContext, ReactNode } from 'react';
 
 interface Project {
   id: number;
-  name: string;
-  description: string;
+  nome: string;
+  preDescricao: string;
+  descricao: string;
+  tecnologias: string[];
+  site: string;
+  linkRepositorio: string;
+  image: string;
+  linkTo: string;
 }
 
 interface ProjectContextType {
@@ -23,6 +31,7 @@ export const ProjectProvider = ({ children }: { children: ReactNode }) => {
     </ProjectContext.Provider>
   );
 };
+
 
 export const useProject = () => {
   const context = useContext(ProjectContext);
