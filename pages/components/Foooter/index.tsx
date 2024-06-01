@@ -15,7 +15,7 @@ export default function Footer() {
         <div className={styles.me}>
           <Image
             className={styles.image}
-            src="./eu.svg"
+            src="/eu.svg"
             alt={'icon ilustrativo meu'}
             width={60}
             height={60}

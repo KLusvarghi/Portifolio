@@ -1,16 +1,22 @@
 // index.tsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Projetos.module.scss';
 import Image from 'next/image';
 import api from '../../api/projetos.json';
 import Button from '../Button';
-import { useProject } from '../../context/ProjectContext';
+// import { useProject } from '../../context/ProjectContext';
 import UseWindowSize from '../windowSize';
 
 export default function Projetos() {
   const width = UseWindowSize();
-  const { setProject } = useProject();
+  const [visibleItems, setVisibleItems] = useState(3);
+  const increment = 3;
 
+  const showMoreItems = () => {
+    setVisibleItems((prev) => Math.min(prev + increment, api.length));
+  };
+
+  // const { setProject } = useProject();
   // useEffect(() => {
   //   setProject(api);
   // }, [setProject])
@@ -27,7 +33,7 @@ export default function Projetos() {
         </div>
 
         <div className={styles.content}>
-          {api.map((projeto, index) => (
+          {api.slice(0, visibleItems).map((projeto, index) => (
             <div key={index} className={styles.projetoContainer}>
               <Image
                 className={styles.image}
@@ -54,6 +60,9 @@ export default function Projetos() {
               </div>
             </div>
           ))}
+          {visibleItems < api.length && (
+            <p className={styles.seeMore} onClick={showMoreItems}>Ver mais projetos 💻</p>
+          )}
         </div>
       </div>
     </main>

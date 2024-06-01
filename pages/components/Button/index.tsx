@@ -37,7 +37,6 @@ const Button = ({
   children,
   ref,
   size,
-  upperCase,
   newWindow,
   link,
   projeto,
@@ -46,8 +45,6 @@ const Button = ({
 }: ProjectButtonProps) => {
   const { setProject } = useProject();
   const router = useRouter();
-
-  console.log(upperCase)
 
   const navigate = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();

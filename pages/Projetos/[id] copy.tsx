@@ -25,7 +25,7 @@ export default function Projetos({ params }: { params: { id: string } }) {
   useEffect(() => {
     async function fetchProject() {
       try {
-        console.log(project);
+        project;
       } catch (error) {
         console.error('Failed to fetch project:', error);
       }
@@ -33,10 +33,12 @@ export default function Projetos({ params }: { params: { id: string } }) {
     fetchProject();
   }, [project]);
 
-  return <div>
-    <h1>{project?.nome}</h1>
-    <p>{project?.descricao}</p>
-  </div>;
+  return (
+    <div>
+      <h1>{project?.nome}</h1>
+      <p>{project?.descricao}</p>
+    </div>
+  );
 }
 
 // src/app/Projetos/[id]/page.tsx

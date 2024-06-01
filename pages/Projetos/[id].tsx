@@ -30,10 +30,6 @@ export default function Projetos({ params }: { params: { id: string } }) {
   useEffect(() => {
     console.log(project?.tecnologias);
 
-    const apiPro = project;
-    // console.log('const com o valor:', apiPro)
-    // console.log('context', project);
-
     async function fetchProject() {
       try {
         // setProject(apiPro)

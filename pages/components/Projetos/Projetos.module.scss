@@ -58,9 +58,8 @@
 
         .description {
           display: flex;
-          flex: 1;
           flex-direction: column;
-          // justify-content: end;
+          flex: 1;
 
           h2 {
             font-family: $font-1;
@@ -77,6 +76,21 @@
             line-height: 28px;
             color: $c7;
           }
+        }
+      }
+
+      .seeMore {
+        align-self: center;
+        cursor: pointer;
+        font-family: $font-1;
+        font-size: 20px;
+        line-height: 24px;
+        color: $c9;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+          color: $c10;
         }
       }
     }

@@ -58,13 +58,11 @@
       }
 
       .iconsSocial {
+        display: flex;
+        gap: 6px;
+
         svg {
           color: $c5;
-          margin-right: 4px;
-
-          &:last-child {
-            margin-right: 0px;
-          }
 
           &:hover {
             transform: scale(1.2);
