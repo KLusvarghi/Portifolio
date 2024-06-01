@@ -32,19 +32,17 @@
 
       a {
         color: $c11;
-        transition: transform 0.8s;
+        transition: transform 0.1s;
         position: relative;
         margin: 0;
 
-        :hover {
+        &:hover {
           color: $c10;
+          transform: scale(1.2);
+          cursor: pointer;
+          // color: $c5;
         }
       }
-    }
-
-    .hideSocial {
-      display: none;
-      cursor: pointer;
     }
   }
 

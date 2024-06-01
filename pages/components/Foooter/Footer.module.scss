@@ -1,0 +1,104 @@
+@import '../../../src/theme/variaveis';
+
+.footerContainer {
+  background-color: $b1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  .wrapper {
+    padding: 80px 240px 60px;
+    display: grid;
+    grid-template-areas:
+      'me me social social'
+      'direitos direitos direitos direitos';
+
+    // .image {
+    //   position: absolute;
+    // }
+
+    .me {
+      grid-area: me;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+
+      .text {
+        max-width: 50%;
+        h5 {
+          font-family: $font-1;
+          font-size: 18px;
+          line-height: 0px;
+          font-weight: 400;
+          color: $c5;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-family: $font-2;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+          color: $c5;
+        }
+      }
+    }
+
+    .social {
+      grid-area: social;
+
+      p {
+        font-family: $font-1;
+        font-size: 18px;
+        line-height: 0px;
+        font-weight: 400;
+        color: $c5;
+        text-transform: uppercase;
+      }
+
+      .iconsSocial {
+        svg {
+          color: $c5;
+          margin-right: 4px;
+
+          &:last-child {
+            margin-right: 0px;
+          }
+
+          &:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+            color: $c4;
+          }
+        }
+      }
+    }
+
+    .direitos {
+      grid-area: direitos;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .separetor {
+        margin: 60px 0px 20px;
+        display: block;
+        height: 0.1px;
+        width: 100%;
+        border-radius: 5px;
+        background-color: $c5;
+      }
+
+      p {
+        margin: 0px;
+        font-family: $font-2;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        color: $c5;
+      }
+    }
+  }
+}
