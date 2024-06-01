@@ -23,7 +23,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <main className={styles.aboutContainer}>
+    <main id="about" className={styles.aboutContainer}>
       <div className={styles.wrapper}>
         <div className={styles.title}>
           <h1>Sobre mim</h1>

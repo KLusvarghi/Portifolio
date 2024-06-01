@@ -1,5 +1,5 @@
 // index.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './Projetos.module.scss';
 import Image from 'next/image';
 import api from '../../api/projetos.json';
@@ -22,7 +22,7 @@ export default function Projetos() {
   // }, [setProject])
 
   return (
-    <main className={styles.projetosContainer}>
+    <main  id='projects' className={styles.projetosContainer}>
       <div className={styles.wrapper}>
         <div className={styles.title}>
           <h1>Projetos</h1>

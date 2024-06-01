@@ -7,7 +7,7 @@ import Forms from './Form';
 
 export default function Contato() {
   return (
-    <main className={styles.contatoContainer}>
+    <main id='contact' className={styles.contatoContainer}>
       <div className={styles.wrapper}>
         <div className={styles.title}>
           <h1>Contato</h1>

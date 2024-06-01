@@ -18,7 +18,7 @@ export default function Intro() {
   const width = UseWindowSize();
 
   return (
-    <main className={styles.introContainer}>
+    <main id="home" className={styles.introContainer}>
       <div className={styles.wrapper}>
         <div className={styles.wrapperSocial}>
           {/* <EjectIcon className={styles.showSocial} /> */}

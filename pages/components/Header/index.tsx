@@ -58,7 +58,7 @@ export default function Header() {
               <span className={styles.underline}>
                 <Link
                   onClick={() => setToggle(!toggle)}
-                  to="home"
+                  to="about"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -74,7 +74,7 @@ export default function Header() {
               <span className={styles.underline}>
                 <Link
                   onClick={() => setToggle(!toggle)}
-                  to="home"
+                  to="projects"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -90,7 +90,7 @@ export default function Header() {
               <span className={styles.underline}>
                 <Link
                   onClick={() => setToggle(!toggle)}
-                  to="home"
+                  to="contact"
                   spy={true}
                   smooth={true}
                   offset={0}
