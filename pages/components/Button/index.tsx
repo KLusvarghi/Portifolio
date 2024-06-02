@@ -22,7 +22,6 @@ interface ProjetoInterface {
 interface ProjectButtonProps {
   children: string;
   link?: string;
-  ref?: string;
   size?: string;
   upperCase?: boolean;
   newWindow?: boolean;
@@ -35,7 +34,6 @@ interface ProjectButtonProps {
 // const Button: React.FC<Props> = ({ children, link, ref, size, windows, propsProjeto }) => {
 const Button = ({
   children,
-  ref,
   size,
   newWindow,
   link,
@@ -59,7 +57,7 @@ const Button = ({
 
   return (
     <>
-      {newWindow || ref ? (
+      {newWindow ? (
         <div
           className={classNames({
             [styles.button]: true,

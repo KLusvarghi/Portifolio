@@ -51,43 +51,72 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 
     .textMain {
       max-width: 1040px;
       font-family: $font-1;
+      // display: flex;
+      // flex-direction: column;
 
       p {
-        margin: 0;
+        margin: 0 0 4px;
         font-size: 24px;
         line-height: 36px;
-
-        &:first-child {
-          animation: show-right 0.9s forwards;
-        }
+        font-weight: 500;
+        animation: show-right 0.9s forwards;
+        // &:first-child {
+        // }
       }
 
-      h1 {
-        display: block;
+      .typing {
+        // display: block;
         font-size: 64px;
         line-height: 72px;
         margin: 4px 0 10px 0;
         animation: show-right 0.9s forwards;
       }
+    }
 
-      .description {
-        margin: 0;
-        font-size: 24px;
-        line-height: 36px;
-      }
+    .subTitle {
+      color: $c9;
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 500;
+      animation: show-right 0.9s forwards;  
     }
 
     .btns {
       display: flex;
       gap: 40px;
-      margin-top: 20px;
+      margin-top: 40px;
       animation: show-down 1.2s forwards;
+      align-self: center;
+    }
+
+    .box {
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      transition: ease-in-out 0.3s;
+
+      font: $font-1;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+
+      padding: 16px 32px;
+      border-radius: 5px;
+      border: 2px solid $m1;
+
+      color: $c2 !important;
+      background-color: $m1;
+      &:hover {
+        box-shadow: inset 300px 0 0 0 $c1;
+        color: $m1 !important;
+      }
     }
   }
 
