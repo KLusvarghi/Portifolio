@@ -28,7 +28,6 @@ interface ProjectButtonProps {
   projeto?: ProjetoInterface;
   type?: 'transparent' | 'outline' | '';
   onClick?: () => void;
-  // propsProjeto: { propsProjeto: ProjetoInterface };
 }
 
 // const Button: React.FC<Props> = ({ children, link, ref, size, windows, propsProjeto }) => {
@@ -39,7 +38,7 @@ const Button = ({
   link,
   projeto,
   type,
-  onClick
+  onClick,
 }: ProjectButtonProps) => {
   const { setProject } = useProject();
   const router = useRouter();
@@ -48,9 +47,9 @@ const Button = ({
     e.preventDefault();
     if (newWindow) {
       if (projeto) setProject(projeto);
-      router.push(`/${link}`);
-      // setTimeout(() => {
-      // }, 1000);
+      setTimeout(() => {
+        router.push(`/${link}`);
+      }, 1000);
     } else {
     }
   };
@@ -72,7 +71,7 @@ const Button = ({
             target="_blank"
             replace
           >
-            {children ? children : 'Mais Sobre'}
+            {children}
           </Link>
         </div>
       ) : (

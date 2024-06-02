@@ -1,9 +1,7 @@
-// context/ProjectContext.tsx
-'use client';
+"use client";
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-import { createContext, useState, useContext, ReactNode } from 'react';
-
-interface Project {
+interface ProjetoInterface {
   id: number;
   nome: string;
   preDescricao: string;
@@ -15,15 +13,27 @@ interface Project {
   linkTo: string;
 }
 
-interface ProjectContextType {
-  project: Project | null;
-  setProject: (project: Project) => void;
+interface ProjectContextInterface {
+  project: ProjetoInterface | null;
+  setProject: (project: ProjetoInterface) => void;
 }
 
-const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
+const ProjectContext = createContext<ProjectContextInterface | undefined>(undefined);
 
 export const ProjectProvider = ({ children }: { children: ReactNode }) => {
-  const [project, setProject] = useState<Project | null>(null);
+  const [project, setProjectState] = useState<ProjetoInterface | null>(null);
+
+  useEffect(() => {
+    const savedProject = localStorage.getItem('project');
+    if (savedProject) {
+      setProjectState(JSON.parse(savedProject));
+    }
+  }, []);
+
+  const setProject = (project: ProjetoInterface) => {
+    setProjectState(project);
+    localStorage.setItem('project', JSON.stringify(project));
+  };
 
   return (
     <ProjectContext.Provider value={{ project, setProject }}>
@@ -32,10 +42,9 @@ export const ProjectProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-
 export const useProject = () => {
   const context = useContext(ProjectContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error('useProject must be used within a ProjectProvider');
   }
   return context;

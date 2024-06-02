@@ -4,17 +4,22 @@ import Image from 'next/image';
 import styles from './Header.module.scss';
 import classNames from 'classnames';
 import { Link } from 'react-scroll';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 
 interface Prop {
-  otherPage?: boolean
+  otherPage?: boolean;
 }
 
-export default function Header({otherPage}: Prop) {
+export default function Header({ otherPage }: Prop) {
   const [toggle, setToggle] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
   return (
-    <header className={styles.headerContainer}>
+    <header
+      className={classNames({
+        [styles.headerContainer]: otherPage ? false : true,
+        [styles.noFized]: otherPage,
+      })}
+    >
       <Image
         // o "src" se deve passar a partir da página public, não precisando voltar página por página
         className={styles.log}
@@ -26,12 +31,14 @@ export default function Header({otherPage}: Prop) {
         onError={(e) => console.error('error: ', e.target)} //caso de erro ele exibe no console
         onClick={() => router.push('/')}
       />
-      <nav className={classNames({
-        [styles.nav]: true,
-        [styles.active]: toggle == true,
-        [styles.activeNone]: toggle == false,
-        [styles.otherPage]: otherPage
-      })}>
+      <nav
+        className={classNames({
+          [styles.nav]: true,
+          [styles.active]: toggle == true,
+          [styles.activeNone]: toggle == false,
+          [styles.otherPage]: otherPage,
+        })}
+      >
         <div className={styles.mobileContainer}>
           <button
             onClick={() => setToggle(!toggle)}

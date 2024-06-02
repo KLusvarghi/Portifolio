@@ -138,6 +138,12 @@
 
             border: 1px solid $m1;
             border-radius: 5px;
+            transition: .2s ease-in-out;
+
+            &:hover{
+              transform: rotate(12deg);
+              cursor: grab;
+            }
           }
         }
       }

@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0px 60px;
-  background: fixed $bgradient0;
+  background: $bgradient0;
   box-sizing: border-box;
   z-index: 1000;
   width: 100%;
@@ -21,7 +21,31 @@
     }
   }
 
-  .otherPage{
+  .otherPage {
+    display: none;
+  }
+}
+
+.noFized {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $bgradient0;
+  box-sizing: border-box;
+  padding: 0px 60px;
+  width: 100%;
+  height: 65px;
+
+  .log {
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .otherPage {
     display: none;
   }
 }
@@ -54,7 +78,6 @@
       list-style: none;
       display: flex;
       justify-content: center;
-      // gap: 55px;
 
       &:hover {
         // animação de focus
