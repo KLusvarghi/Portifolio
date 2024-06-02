@@ -5,7 +5,7 @@ import Image from 'next/image';
 import api from '../../api/projetos.json';
 import Button from '../Button';
 // import { useProject } from '../../context/ProjectContext';
-import UseWindowSize from '../windowSize';
+import UseWindowSize from '../../Helper/windowSize';
 
 export default function Projetos() {
   const width = UseWindowSize();
@@ -22,7 +22,7 @@ export default function Projetos() {
   // }, [setProject])
 
   return (
-    <main  id='projects' className={styles.projetosContainer}>
+    <main id="projects" className={styles.projetosContainer}>
       <div className={styles.wrapper}>
         <div className={styles.title}>
           <h1>Projetos</h1>
@@ -61,7 +61,9 @@ export default function Projetos() {
             </div>
           ))}
           {visibleItems < api.length && (
-            <p className={styles.seeMore} onClick={showMoreItems}>Ver mais projetos 💻</p>
+            <p className={styles.seeMore} onClick={showMoreItems}>
+              Ver mais projetos 💻
+            </p>
           )}
         </div>
       </div>

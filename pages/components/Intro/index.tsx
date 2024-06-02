@@ -10,7 +10,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { TypeAnimation } from 'react-type-animation';
 // import EjectIcon from '@mui/icons-material/Eject';
 import classNames from 'classnames';
-import UseWindowSize from '../windowSize';
+import UseWindowSize from '../../Helper/windowSize';
 // import { whatsSize } from '../WindowSize';
 
 export default function Intro() {

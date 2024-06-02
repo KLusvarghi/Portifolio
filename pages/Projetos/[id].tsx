@@ -10,6 +10,7 @@ import Image from 'next/image';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Button from '../components/Button';
 import Head from '../Helper/Head';
+import AnimatedSection from '../Helper/AnimatedSction';
 
 interface ProjetoInterface {
   id: number;
@@ -45,9 +46,9 @@ export default function Projetos({ params }: { params: { id: string } }) {
   };
 
   return (
-    <>
+    <AnimatedSection>
       <Head title={`Projeto - ${project?.nome}`} />
-      <Header />
+      <Header otherPage={true} />
       <main className={styles.projectContainer}>
         <div className={styles.wrapper}>
           <div>
@@ -109,6 +110,6 @@ export default function Projetos({ params }: { params: { id: string } }) {
         </div>
       </main>
       <Footer />
-    </>
+    </AnimatedSection>
   );
 }

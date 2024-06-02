@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styles from './AboutMe.module.scss';
 import Button from '../Button';
 import Link from 'next/link';
-import UseWindowSize from '../windowSize';
+import UseWindowSize from '../../Helper/windowSize';
 
 export default function AboutMe() {
   const width = UseWindowSize();

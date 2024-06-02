@@ -4,9 +4,15 @@ import Image from 'next/image';
 import styles from './Header.module.scss';
 import classNames from 'classnames';
 import { Link } from 'react-scroll';
+import {useRouter} from 'next/router';
 
-export default function Header() {
+interface Prop {
+  otherPage?: boolean
+}
+
+export default function Header({otherPage}: Prop) {
   const [toggle, setToggle] = useState(false);
+  const router = useRouter()
   return (
     <header className={styles.headerContainer}>
       <Image
@@ -18,12 +24,13 @@ export default function Header() {
         height={20}
         loading="eager"
         onError={(e) => console.error('error: ', e.target)} //caso de erro ele exibe no console
-        onClick={() => {}}
+        onClick={() => router.push('/')}
       />
       <nav className={classNames({
         [styles.nav]: true,
         [styles.active]: toggle == true,
-        [styles.activeNone]: toggle == false
+        [styles.activeNone]: toggle == false,
+        [styles.otherPage]: otherPage
       })}>
         <div className={styles.mobileContainer}>
           <button

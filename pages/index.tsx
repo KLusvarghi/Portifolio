@@ -6,18 +6,26 @@ import Intro from './components/Intro';
 import AboutMe from './components/AboutMe';
 import Projetos from './components/Projetos';
 import Contato from './components/Contato';
-
+import AnimatedSection from './Helper/AnimatedSction';
 
 export default function Home() {
   return (
-    // <div style={{background: 'black'} }>
-    <main>
+    // <div  }>
+    <main style={{background: '#f1f7fb'}}>
       <Head title="Home - Portifólio Kauã Ortolani Lusvarghi" />
       <Header />
-      <Intro />
-      <AboutMe />
-      <Projetos />
-      <Contato />
+      <AnimatedSection>
+        <Intro />
+      </AnimatedSection>
+      <AnimatedSection>
+        <AboutMe />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Projetos />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Contato />
+      </AnimatedSection>
       <Footer />
     </main>
   );
