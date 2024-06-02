@@ -60,7 +60,7 @@
       }
 
       .tecnologias {
-        // margin-bottom: 60px;
+        margin-bottom: 60px;
 
         h2 {
           text-transform: capitalize;
@@ -76,6 +76,8 @@
           gap: 20px;
 
           .tec {
+            padding: 0;
+            margin: 0;
             font-size: $font-1;
             font-weight: 500;
             background-color: $m1;
@@ -96,23 +98,21 @@
       }
 
       .btns{
-        margin-top: 60px;
         display: flex;
         flex-direction: column;
         
         h2 {
-          margin: 0;
           text-transform: capitalize;
           font-family: $font-1;
           font-size: 34px;
-          // line-height: 42px;
+          line-height: 42px;
           line-height: 0px;
           color: $c9;
         }
-
+        
         .containerBtns{
           height: auto;
-          margin: 0px;
+          margin: 20px 0px 0px;
           display: flex;
           flex-direction: row;
           gap: 20px;

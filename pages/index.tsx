@@ -7,11 +7,12 @@ import AboutMe from './components/AboutMe';
 import Projetos from './components/Projetos';
 import Contato from './components/Contato';
 import AnimatedSection from './Helper/AnimatedSction';
+import styles from './Home.module.scss';
 
 export default function Home() {
   return (
     // <div  }>
-    <main style={{background: '#f1f7fb'}}>
+    <main className={styles.homeContainer}>
       <Head title="Home - Portifólio Kauã Ortolani Lusvarghi" />
       <Header />
       <AnimatedSection>
