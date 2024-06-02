@@ -69,46 +69,46 @@ export default function Intro() {
                 cursor={true}
                 speed={10}
               />
-            </div>
-            {active && (
-              <>
-                <p className={styles.subTitle}>
-                  Um desenvolvedor web iniciante e focado em resultados, que
-                  constrói e gerencia sites e aplicativos web visando o
-                  resultado geral do produto.
-                </p>
-                <div className={styles.btns}>
-                  <Link
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    className={styles.box}
-                    duration={500}
-                  >
-                    Contato
-                  </Link>
-                  <Link
-                    to="projects"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    className={styles.box}
-                    duration={500}
-                  >
-                    Projetos
-                  </Link>
+              {active && (
+                <>
+                  <p className={styles.subTitle}>
+                    Um desenvolvedor web iniciante e focado em resultados, que
+                    constrói e gerencia sites e aplicativos web visando o
+                    resultado geral do produto.
+                  </p>
+                  <div className={styles.btns}>
+                    <Link
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      className={styles.box}
+                      duration={500}
+                    >
+                      Contato
+                    </Link>
+                    <Link
+                      to="projects"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      className={styles.box}
+                      duration={500}
+                    >
+                      Projetos
+                    </Link>
 
-                  {/* <Button
+                    {/* <Button
                 size={
                   width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'
                 }
                 >
                 Projetos
               </Button> */}
-                </div>
-              </>
-            )}
+                  </div>
+                </>
+              )}
+            </div>
           </div>
           <div className={styles.scroll}>
             <ExpandMoreIcon className={styles.arrow} />

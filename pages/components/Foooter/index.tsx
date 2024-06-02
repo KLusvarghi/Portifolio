@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
         <div className={styles.direitos}>
           <span className={styles.separetor}></span>
-          <p>Feito com <span>Next.js</span> a algumas horas de dedicação.</p>
+          <p>Feito com <span>Next.js</span> e algumas horas de dedicação.</p>
           <p>
             Direitos Autorais 2024 © Prototipado e desenvolvido por Kauã
             Lusvarghi

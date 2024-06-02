@@ -7,15 +7,12 @@
   box-sizing: border-box;
 
   .wrapper {
-    padding: 80px 240px 60px;
+    padding: 80px 200px 60px;
     display: grid;
     grid-template-areas:
-      'me me social social'
-      'direitos direitos direitos direitos';
-
-    // .image {
-    //   position: absolute;
-    // }
+      'me me  social'
+      'direitos direitos  direitos';
+    grid-template-columns: 37.5% 37.5% 25%;
 
     .me {
       grid-area: me;
@@ -25,7 +22,7 @@
       gap: 20px;
 
       .text {
-        max-width: 50%;
+        // max-width: 50%;
         h5 {
           font-family: $font-1;
           font-size: 18px;
@@ -47,6 +44,7 @@
 
     .social {
       grid-area: social;
+      justify-self: flex-end;
 
       p {
         font-family: $font-1;
@@ -82,7 +80,8 @@
 
       .separetor {
         margin: 60px 0px 20px;
-        display: block;
+        display: flex;
+        align-self: flex-end;
         height: 0.1px;
         width: 100%;
         border-radius: 5px;
@@ -96,10 +95,6 @@
         line-height: 18px;
         font-weight: 400;
         color: $c5;
-
-        span{
-          font-weight: 600;
-        }
       }
     }
   }
