@@ -54,6 +54,9 @@
 
       &:focus {
         outline: none;
+        // border: 1px solid $m1;
+        box-shadow: 0 0 0 2px #3CA7EB, 0 0 0 3px $m2; /* assim criando uma bordar após a sobra*/
+
       }
     }
   }
@@ -96,6 +99,8 @@
     box-shadow: inset 300px 0 0 0 $c1;
     color: $m1 !important;
     cursor: wait;
+    opacity: .5;
+
 
     &:hover {
       background-color: none;
