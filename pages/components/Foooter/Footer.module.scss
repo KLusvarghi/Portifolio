@@ -9,14 +9,12 @@
   .wrapper {
     padding: 80px 200px 60px;
     display: grid;
-    grid-template-columns: 37.5% 37.5% 25%;
+    // grid-template-columns: 37.5% 37.5% 25%;
     grid-template-areas:
       'me me  social'
       'direitos direitos  direitos';
-<<<<<<< HEAD
     grid-template-columns: 32.5% 32.5% 35%;
-=======
->>>>>>> showr
+
 
     .me {
       grid-area: me;
@@ -24,6 +22,12 @@
       flex-direction: row;
       align-items: center;
       gap: 20px;
+
+      .image{
+        margin-top: 20px;
+        border-radius: 50%;
+        align-self: flex-start;
+      }
 
       .text {
         max-width: 70%;
@@ -117,3 +121,7 @@
     }
   }
 }
+// 1100px
+// 940px
+// 650px
+// 450px

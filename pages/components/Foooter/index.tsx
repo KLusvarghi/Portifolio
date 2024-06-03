@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 
 export default function Footer() {
   const router = useRouter()
+  const profileImageUrl = 'https://media.licdn.com/dms/image/C4D03AQGgcU2hxMQ7rw/profile-displayphoto-shrink_800_800/0/1664198488709?e=1723075200&v=beta&t=RxBIXF-5RCu9U4KEp5zZfXGWHTPeGfUX1Z3OQtnc3ZE';
 
   return (
     <main className={styles.footerContainer}>
@@ -18,7 +19,7 @@ export default function Footer() {
         <div className={styles.me}>
           <Image
             className={styles.image}
-            src="/eu.svg"
+            src={profileImageUrl}
             alt={'icon ilustrativo meu'}
             width={60}
             height={60}
