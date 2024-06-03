@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 // Tons de cinza
 $c0: #ffffff;
@@ -10,6 +11,7 @@ $c4: #c1c4c8;
 $c5: #aaaeb6;
 $c6: #999ca4;
 $c7: #73777d;
+$c7-2: #666;
 $c8: #5d616b;
 $c9: #404447;
 $c10: #242526;
@@ -23,7 +25,7 @@ $m2: #225E84;
 
 // backgrounds
 $b0: #f1f7fb;
-$b1: #0e0e0e;
+$b1: #141414;
 $bgradient0: rgba(223, 239, 249, 95%);
 $bSocial: #EEF6FB;
 
@@ -31,13 +33,14 @@ $bSocial: #EEF6FB;
 // Font
 $font-1: 'Poppins';
 $font-2: 'Roboto';
+$font-3: 'Source Sans 3';
 
 // break points
 $bp-01: 1200px;
 $bp-01-01: 940px;
 $bp-02: 710px;
 $bp-02-02: 650px;
-$bp-03: 440px;
+$bp-03: 450px;
 
 // Animação
 @keyframes show-right {

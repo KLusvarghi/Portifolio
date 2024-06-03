@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './AboutMe.module.scss';
 import Button from '../Button';
 import Link from 'next/link';
@@ -6,8 +6,8 @@ import UseWindowSize from '../../Helper/windowSize';
 import AnimatedSection from '../../Helper/AnimatedSection';
 
 export default function AboutMe() {
+  const [repos, setRepos] = useState(0)
   const width = UseWindowSize();
-
   const technology = [
     'html',
     'css',
@@ -23,10 +23,27 @@ export default function AboutMe() {
     'terminal',
   ];
 
+  useEffect(() => {
+    const fetchRespGit = async () => {
+      try {
+        const repos = await fetch(
+          'https://api.github.com/users/KLusvarghi/repos',
+        );
+        const data = await repos.json();
+        setRepos(data.length)
+      } catch (err) {
+        console.log('Erro ao carregar os repositórios do github.', err)
+        setRepos(0)
+      }
+    };
+
+    fetchRespGit();
+  });
+
   return (
     <main id="about" className={styles.aboutContainer}>
-      <AnimatedSection>
-        <div className={styles.wrapper}>
+      <div className={styles.wrapper}>
+        <AnimatedSection>
           <div className={styles.title}>
             <h1>Sobre mim</h1>
             <span className={styles.separetor}></span>
@@ -36,16 +53,22 @@ export default function AboutMe() {
               e tecnologia
             </p>
           </div>
+        </AnimatedSection>
+        <AnimatedSection>
           <div className={styles.content}>
             <div className={styles.about}>
               <h2>Um pouco sobre mim!</h2>
               <p>
-                Como desenvolvedor Web Frontend, concentro meus esforços na
-                construção e gerenciamento das interfaces de sites e aplicações
-                Web, visando impulsionar o sucesso do produto como um todo.
-                Estou atualmente no último semestre do curso de Análise e
-                Desenvolvimento de Sistemas na Fatec Praia Grande. Além de minha
-                paixão pela programação, também sou um atleta ativo,
+                Como desenvolvedor{' '}
+                <span className={styles.bold}>Web Frontend</span>, concentro
+                meus esforços na construção e gerenciamento das interfaces de
+                sites e aplicações Web, visando impulsionar o sucesso do produto
+                como um todo. Estou atualmente no último semestre do curso de{' '}
+                <span className={styles.bold}>
+                  Análise e Desenvolvimento de Sistemas
+                </span>{' '}
+                na <span className={styles.bold}>Fatec Praia Grande</span>. Além
+                de minha paixão pela programação, também sou um atleta ativo,
                 representando a cidade de Praia Grande e recentemente integrando
                 o grupo da seleção brasileira de beach handball.
                 <br /> Explore alguns dos projetos que realizei na seção
@@ -75,14 +98,14 @@ export default function AboutMe() {
               <div className={styles.itens}>
                 <div className={styles.experience}>
                   <div className={styles.study}>
-                    <p className={styles.number}>3+</p>
+                    <p className={styles.number}>+3</p>
                     <div className={styles.text}>
                       <p>Anos</p>
                       <p>estudando</p>
                     </div>
                   </div>
                   <div className={styles.study}>
-                    <p className={styles.number}>35+</p>
+                    <p className={styles.number}>+{repos}</p>
                     <div className={styles.text}>
                       <p>Projetos</p>
                       <p>no Github</p>
@@ -91,7 +114,7 @@ export default function AboutMe() {
                 </div>
                 <Button
                   size={
-                    width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'
+                    width <= 650 ? 'small' : width <= 1200 ? 'medium' : 'normal'
                   }
                   link="https://drive.google.com/file/d/15YoWCl9BiAazKIh6NmqVAz5L0EMGUd0o/view?usp=sharing"
                 >
@@ -108,8 +131,8 @@ export default function AboutMe() {
               </div>
             </div>
           </div>
-        </div>
-      </AnimatedSection>
+        </AnimatedSection>
+      </div>
     </main>
   );
 }

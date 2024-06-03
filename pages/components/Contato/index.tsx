@@ -9,8 +9,8 @@ import AnimatedSection from '../../Helper/AnimatedSection';
 export default function Contato() {
   return (
     <main id="contact" className={styles.contatoContainer}>
-      <AnimatedSection>
-        <div className={styles.wrapper}>
+      <div className={styles.wrapper}>
+        <AnimatedSection>
           <div className={styles.title}>
             <h1>Contato</h1>
             <span className={styles.separetor}></span>
@@ -20,6 +20,8 @@ export default function Contato() {
               possível
             </p>
           </div>
+        </AnimatedSection>
+        <AnimatedSection>
           <div className={styles.content}>
             <div className={styles.info}>
               <div className={styles.about}>
@@ -48,8 +50,8 @@ export default function Contato() {
               <Forms />
             </div>
           </div>
-        </div>
-      </AnimatedSection>
+        </AnimatedSection>
+      </div>
     </main>
   );
 }

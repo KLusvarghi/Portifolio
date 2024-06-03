@@ -6,17 +6,22 @@
   padding: 112px 120px 76px 120px;
 
   .wrapper {
+    max-width: 120rem;
+    margin: auto;
+
     .title {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       color: $c9;
+      margin-bottom: 80px;
 
       h1 {
-        font-family: $font-1;
-        font-size: 48px;
-        line-height: 56px;
+        font-family: $font-3;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 46px;
       }
 
       .separetor {
@@ -30,16 +35,16 @@
       }
 
       .subtitle {
-        font-family: $font-2;
-        font-size: 24px;
-        line-height: 32px;
-        max-width: 1107px;
+        font-family: $font-3;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        max-width: 80%;
         text-align: center;
       }
     }
 
     .content {
-      margin-top: 80px;
       gap: 120px;
       display: flex;
       flex-direction: row;
@@ -47,26 +52,30 @@
 
       .about {
         flex: 1;
-
         h2 {
-          font-family: $font-1;
+          font-family: $font-3;
+          font-weight: 500;
           font-size: 32px;
           line-height: 40px;
-          font-weight: 600;
           color: $c9;
         }
 
         p {
-          font-family: $font-2;
+          font-family: $font-3;
           font-size: 18px;
-          line-height: 24px;
+          line-height: 28px;
           font-weight: 400;
           color: $c7;
+
+          .bold {
+            font-weight: 600;
+            color: $c8;
+          }
 
           .link {
             text-decoration: none;
             color: $m1;
-            font-weight: 500;
+            font-weight: 600;
 
             &:hover {
               text-decoration: underline;
@@ -88,7 +97,6 @@
             .study {
               display: flex;
               flex-direction: column;
-              gap: 10px;
               margin: 0px;
 
               .number {
@@ -111,12 +119,11 @@
 
       .skills {
         flex: 1;
-
         h2 {
-          font-family: $font-1;
+          font-family: $font-3;
+          font-weight: 500;
           font-size: 32px;
           line-height: 40px;
-          font-weight: 600;
           color: $c9;
         }
 
@@ -124,23 +131,23 @@
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          gap: 20px;
+          gap: 12px;
 
           span {
             background: $m1;
             color: $c2;
             padding: 8px 12px;
 
-            font-family: $font-1;
+            font-family: $font-3;
             font-size: 18px;
             line-height: 24px;
-            font-weight: 500;
+            font-weight: 400;
 
             border: 1px solid $m1;
             border-radius: 5px;
-            transition: .2s ease-in-out;
+            transition: 0.2s ease-in-out;
 
-            &:hover{
+            &:hover {
               transform: rotate(12deg);
               cursor: grab;
             }
@@ -151,66 +158,22 @@
   }
 }
 
-@media (max-width: $bp-01) {
-  //1200px
+@media (max-width: 1100px) {
+  //1100px
   .aboutContainer {
     .wrapper {
-      .title {
-        h1 {
-          // font-size: 48px;
-          // line-height: 56px;
-          font-size: 40px;
-          line-height: 48px;
-        }
-
-        .separetor {
-          height: 5px;
-          width: 28px;
-        }
-
-        .subtitle {
-          font-size: 20px;
-          line-height: 28px;
-        }
-      }
-
       .content {
-        gap: 82px;
-        margin-top: 60px;
-
         .about {
-          h2 {
-            font-size: 26px;
-            line-height: 34px;
-          }
-
           p {
-            font-size: 14px;
+            font-size: 15px;
             line-height: 20px;
           }
 
           .itens {
-            .expirience {
-              p {
-                font-size: 14px;
-                line-height: 20px;
-              }
-            }
-          }
-        }
-
-        .skills {
-          h2 {
-            font-size: 26px;
-            line-height: 34px;
-          }
-
-          .hardSkills {
-            gap: 12px;
-            span {
-              font-size: 14px;
-              line-height: 20px;
-            }
+            margin-top: 40px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
           }
         }
       }
@@ -223,58 +186,19 @@
   .aboutContainer {
     .wrapper {
       .title {
-        h1 {
-          font-size: 40px;
-          line-height: 48px;
-        }
-
-        .separetor {
-          height: 5px;
-          width: 28px;
-        }
+        margin-bottom: 40px;
 
         .subtitle {
-          font-size: 20px;
-          line-height: 28px;
+          max-width: 100%;
         }
       }
-
       .content {
+        gap: 80px;
         flex-direction: column;
+
         .about {
-          h2 {
-            font-size: 26px;
-            line-height: 34px;
-          }
-
-          p {
-            font-size: 14px;
-            line-height: 20px;
-          }
-
           .itens {
-            .expirience {
-              p {
-                font-size: 14px;
-                line-height: 20px;
-              }
-            }
-          }
-        }
-
-        .skills {
-          h2 {
-            font-size: 26px;
-            line-height: 34px;
-          }
-
-          .hardSkills {
-            gap: 12px;
-            span {
-              font-size: 14px;
-              line-height: 20px;
-              padding: 6px 10px;
-            }
+            flex-direction: row;
           }
         }
       }
@@ -285,38 +209,32 @@
 @media (max-width: $bp-02-02) {
   //650px
   .aboutContainer {
-    padding: 100px 80px 76px 80px;
+    padding: 60px 60px 0px 60px;
 
     .wrapper {
       .title {
-        h1 {
-          font-size: 40px;
-          line-height: 48px;
-        }
-
-        .subtitle {
-          font-size: 15px;
-          line-height: 22px;
-        }
-      }
-
-      .content {
-        margin-top: 36px;
-
-        .about {
-          .itens {
-            flex-direction: column;
-            align-items: start;
-          }
-        }
+        margin-bottom: 40px;
       }
     }
   }
 }
 
 @media (max-width: $bp-03) {
-  //440px
+  //450px
   .aboutContainer {
-    padding: 100px 60px 76px 60px;
+    padding: 60px 32px 0px 32px;
+
+    .wrapper {
+      .content {
+        gap: 100px;
+
+        .about {
+          .itens {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+      }
+    }
   }
 }

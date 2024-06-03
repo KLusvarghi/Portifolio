@@ -9,10 +9,14 @@
   .wrapper {
     padding: 80px 200px 60px;
     display: grid;
+    grid-template-columns: 37.5% 37.5% 25%;
     grid-template-areas:
       'me me  social'
       'direitos direitos  direitos';
+<<<<<<< HEAD
     grid-template-columns: 32.5% 32.5% 35%;
+=======
+>>>>>>> showr
 
     .me {
       grid-area: me;
@@ -22,22 +26,23 @@
       gap: 20px;
 
       .text {
-        // max-width: 50%;
+        max-width: 70%;
+        
         h5 {
-          font-family: $font-1;
+          font-family: $font-3;
           font-size: 18px;
           line-height: 0px;
           font-weight: 400;
-          color: $c5;
+          color: $c2;
           text-transform: uppercase;
         }
 
         p {
-          font-family: $font-2;
+          font-family: $font-3;
           font-size: 14px;
           line-height: 20px;
           font-weight: 400;
-          color: $c5;
+          color: $c2;
         }
       }
     }
@@ -47,11 +52,11 @@
       justify-self: flex-end;
 
       p {
-        font-family: $font-1;
+        font-family: $font-3;
         font-size: 18px;
         line-height: 0px;
         font-weight: 400;
-        color: $c5;
+        color: $c2;
         text-transform: uppercase;
       }
 
@@ -60,12 +65,12 @@
         gap: 6px;
 
         svg {
-          color: $c5;
+          color: $c2;
 
           &:hover {
             transform: scale(1.2);
             cursor: pointer;
-            color: $c4;
+            color: $c3;
           }
         }
       }
@@ -85,17 +90,30 @@
         height: 0.1px;
         width: 100%;
         border-radius: 5px;
-        background-color: $c5;
+        background-color: $c2;
       }
 
       p {
         margin: 0px;
-        font-family: $font-2;
+        font-family: $font-3;
         font-size: 12px;
         line-height: 18px;
         font-weight: 400;
-        color: $c5;
+        color: $c2;
       }
+
+      span{
+        font-weight: 700;
+      }
+
+      .link{
+        cursor: pointer;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+
     }
   }
 }
