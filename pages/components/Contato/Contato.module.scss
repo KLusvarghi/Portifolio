@@ -5,12 +5,14 @@
   padding: 112px 120px 76px 120px;
   background-image: url('./../../../public/background/bgDown.svg');
   position: relative;
-  // height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   .wrapper {
+    max-width: 120rem;
+    margin: auto;
+
     .title {
       display: flex;
       flex-direction: column;
@@ -20,9 +22,10 @@
       margin-bottom: 80px;
 
       h1 {
-        font-family: $font-1;
-        font-size: 48px;
-        line-height: 56px;
+        font-family: $font-3;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 46px;
       }
 
       .separetor {
@@ -36,69 +39,63 @@
       }
 
       .subtitle {
-        font-family: $font-2;
-        font-size: 24px;
-        line-height: 32px;
-        max-width: 1107px;
+        font-family: $font-3;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        max-width: 80%;
         text-align: center;
       }
     }
 
-
-    .content{
+    .content {
       display: flex;
       justify-content: space-evenly;
-      .info{
+
+      .info {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         gap: 40px;
 
-        .about{
+        .about {
           display: flex;
           flex-direction: row;
           justify-content: start;
           align-items: center;
           gap: 12px;
-       
-          .icon{
+
+          .icon {
             height: 58px;
             width: 46px;
             color: $m1;
           }
 
-          .text{
+          .text {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            h4{
+
+            h4 {
               margin: 0;
-              font-family: $font-2;
+              font-family: $font-3;
               font-weight: 400;
               font-size: 20px;
               line-height: 14px;
               color: $c7;
             }
 
-            p{
+            p {
               margin: 0;
-
-              font-family: $font-2;
+              font-family: $font-3;
               font-weight: 400;
-              font-size: 16px;
-              line-height: 10px;
+              font-size: 18px;
+              line-height: 12px;
               color: $c7;
             }
           }
         }
-      }
-
-
-
-
-      .form{
-
       }
     }
   }

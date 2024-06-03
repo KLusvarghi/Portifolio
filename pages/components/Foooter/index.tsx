@@ -7,8 +7,11 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Footer() {
+  const router = useRouter()
+
   return (
     <main className={styles.footerContainer}>
       <div className={styles.wrapper}>
@@ -54,8 +57,8 @@ export default function Footer() {
           <span className={styles.separetor}></span>
           <p>Feito com <span>Next.js</span> e algumas horas de dedicação.</p>
           <p>
-            Direitos Autorais 2024 © Prototipado e desenvolvido por Kauã
-            Lusvarghi
+            Direitos Autorais 2024 © Prototipado e desenvolvido por <span onClick={() => router.push('/')} className={styles.link}>Kauã
+            Lusvarghi</span>
           </p>
         </div>
       </div>

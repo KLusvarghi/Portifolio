@@ -35,7 +35,7 @@
   .assunto,
   .mensagem {
     p {
-      font-family: $font-2;
+      font-family: $font-3;
       font-weight: 400;
       font-size: 14px;
       line-height: 0px;
@@ -44,6 +44,7 @@
 
     input,
     textarea {
+      font-family: $font-3;
       width: 100%;
       background-color: $c0;
       padding: 24px 22px 20px 16px;
@@ -54,6 +55,7 @@
 
       &:focus {
         outline: none;
+        box-shadow: 0 0 0 2px #4B97C8, 0 0 0 3px $m1;
       }
     }
   }
@@ -76,7 +78,6 @@
 
     font: $font-1;
     font-size: 16px;
-    // line-height: 20px;
     font-weight: 700;
     letter-spacing: 1.2px;
 

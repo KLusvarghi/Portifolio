@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Intro.module.scss';
-import Button from '../Button';
 import LinkNext from 'next/link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import DescriptionIcon from '@mui/icons-material/Description';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { TypeAnimation } from 'react-type-animation';
 import classNames from 'classnames';
 import UseWindowSize from '../../Helper/windowSize';
-// import { whatsSize } from '../WindowSize';
 import { Link } from 'react-scroll';
 import AnimatedSection from '../../Helper/AnimatedSection';
 
@@ -110,9 +107,16 @@ export default function Intro() {
               )}
             </div>
           </div>
-          <div className={styles.scroll}>
-            <ExpandMoreIcon className={styles.arrow} />
+          <div
+            className={classNames({
+              [styles.mouse]: width >= 570 ? true : false,
+            })}
+          >
+            <span className={styles.scroll}></span>
           </div>
+          {/* <div className={styles.scroll}>
+            <ExpandMoreIcon className={styles.arrow} />
+          </div> */}
         </div>
       </main>
     </AnimatedSection>

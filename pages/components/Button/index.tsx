@@ -23,7 +23,6 @@ interface ProjectButtonProps {
   children: string;
   link?: string;
   size?: string;
-  upperCase?: boolean;
   newWindow?: boolean;
   projeto?: ProjetoInterface;
   type?: 'transparent' | 'outline' | '';

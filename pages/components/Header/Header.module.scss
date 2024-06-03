@@ -14,7 +14,7 @@
 
   .log {
     cursor: pointer;
-    transition: 0.4s;
+    transition: .1s;
 
     &:hover {
       transform: scale(1.05);
@@ -121,7 +121,7 @@
           .link {
             font-size: 14px;
             line-height: 32px;
-            font-family: 'Poppins';
+            font-family: $font-3;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;

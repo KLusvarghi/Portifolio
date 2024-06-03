@@ -1,28 +1,26 @@
 @import '../../../src/theme/variaveis';
 
 .button {
-  // margin-top: 40px;
   display: flex;
   flex-direction: row;
-
+  font-family: $font-3;
+  
   .box {
+    text-transform: uppercase;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
     transition: ease-in-out 0.3s;
-
-    font: $font-1;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     letter-spacing: 1.2px;
-
     padding: 16px 32px;
     border-radius: 5px;
     border: 2px solid $m1;
-
     color: $c2 !important;
     background-color: $m1;
+
     &:hover {
       box-shadow: inset 300px 0 0 0 $c1;
       color: $m1 !important;
@@ -34,23 +32,18 @@
     text-decoration: none;
     cursor: pointer;
     transition: ease-in-out 0.3s;
-
-    font: $font-1;
+  
     font-size: 18px;
     line-height: 24px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1.2px;
-
     padding: 16px 32px;
     border-radius: 5px;
     border: 2px solid transparent;
-
     color: $m1 !important;
-    // background-color: $m1;
+
     &:hover {
       border: 2px solid $m1;
-      // box-shadow: inset 300px 0 0 0 $m1;
-      // color: $c2 !important;
     }
   }
 
@@ -59,18 +52,15 @@
     text-decoration: none;
     cursor: pointer;
     transition: ease-in-out 0.3s;
-
-    font: $font-1;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     letter-spacing: 1.2px;
-
     padding: 16px 32px;
     border-radius: 5px;
     border: 2px solid $m1;
-
     color: $m1 !important;
+
     &:hover {
       box-shadow: inset 300px 0 0 0 $m1;
       color: $c2 !important;
@@ -79,27 +69,15 @@
 }
 
 .medium{
-  margin-top: 34px;
-
   .box{
-    // font-size: 16px;
-    // line-height: 22px;
-    // padding: 12px 28px;
-
-    font-size: 18px;
-    line-height: 24px;
-    padding: 16px 32px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px 28px;
   }
 }
 
 .small{
-  margin-top: 30px;
-
   .box{
-    // font-size: 16px;
-    // line-height: 22px;
-    // padding: 12px 28px;
-
     font-size: 12px;
     line-height: 20px;
     padding: 12px 28px;

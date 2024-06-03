@@ -3,12 +3,11 @@
 .projectContainer {
   background: $b0;
   margin: 0;
-  padding: 112px 300px 76px 300px;
+  padding: 80px 280px 76px 280px;
 
   .wrapper {
     .ArrowBack {
       align-self: flex-start;
-      // position: relative;
       color: $c12;
       top: 50px;
       cursor: pointer;
@@ -30,7 +29,7 @@
       h1 {
         line-height: 0px;
         text-transform: capitalize;
-        font-family: $font-1;
+        font-family: $font-3;
         color: $c10;
         font-size: 48px;
       }
@@ -42,14 +41,14 @@
 
         h2 {
           text-transform: capitalize;
-          font-family: $font-1;
+          font-family: $font-3;
           font-size: 34px;
           line-height: 42px;
           color: $c9;
         }
 
         p {
-          font-family: $font-2;
+          font-family: $font-3;
           font-weight: 400;
           font-size: 22px;
           line-height: 28px;
@@ -63,7 +62,7 @@
 
         h2 {
           text-transform: capitalize;
-          font-family: $font-1;
+          font-family: $font-3;
           font-size: 34px;
           line-height: 42px;
           color: $c9;
@@ -102,7 +101,7 @@
         
         h2 {
           text-transform: capitalize;
-          font-family: $font-1;
+          font-family: $font-3;
           font-size: 34px;
           line-height: 42px;
           line-height: 0px;
