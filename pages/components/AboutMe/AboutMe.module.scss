@@ -137,12 +137,10 @@
             background: $m1;
             color: $c2;
             padding: 8px 12px;
-
             font-family: $font-3;
             font-size: 18px;
             line-height: 24px;
             font-weight: 400;
-
             border: 1px solid $m1;
             border-radius: 5px;
             transition: 0.2s ease-in-out;
@@ -159,7 +157,6 @@
 }
 
 @media (max-width: 1100px) {
-  //1100px
   .aboutContainer {
     .wrapper {
       .content {
@@ -181,8 +178,7 @@
   }
 }
 
-@media (max-width: $bp-01-01) {
-  //940px
+@media (max-width: 940px) {
   .aboutContainer {
     .wrapper {
       .title {
@@ -206,10 +202,9 @@
   }
 }
 
-@media (max-width: $bp-02-02) {
-  //650px
+@media (max-width: 650px) {
   .aboutContainer {
-    padding: 60px 60px 0px 60px;
+    padding: 80px 40px 0px;
 
     .wrapper {
       .title {
@@ -219,8 +214,7 @@
   }
 }
 
-@media (max-width: $bp-03) {
-  //450px
+@media (max-width: 450px) {
   .aboutContainer {
     padding: 60px 32px 0px 32px;
 

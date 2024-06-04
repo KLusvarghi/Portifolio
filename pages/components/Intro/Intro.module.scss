@@ -39,12 +39,11 @@
             color: $c10;
             transform: scale(1.2);
             cursor: pointer;
-            // color: $c5;
           }
         }
       }
 
-      .hideSocial{
+      .hideSocial {
         display: none;
       }
     }
@@ -93,41 +92,38 @@
           align-self: center;
           animation: show-down 1.2s forwards;
           justify-content: center;
-        }
-      }
 
-      .box {
-        display: inline-block;
-        text-decoration: none;
-        cursor: pointer;
-        transition: ease-in-out 0.3s;
-        text-transform: uppercase;
-
-        font: $font-1;
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: 700;
-        letter-spacing: 1.2px;
-
-        padding: 16px 32px;
-        border-radius: 5px;
-        border: 2px solid $m1;
-
-        color: $c2 !important;
-        background-color: $m1;
-        &:hover {
-          box-shadow: inset 300px 0 0 0 $c1;
-          color: $m1 !important;
+          .box {
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            transition: ease-in-out 0.3s;
+            text-transform: uppercase;
+            font: $font-1;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            padding: 16px 32px;
+            border-radius: 5px;
+            border: 2px solid $m1;
+            color: $c2 !important;
+            background-color: $m1;
+            &:hover {
+              box-shadow: inset 300px 0 0 0 $c1;
+              color: $m1 !important;
+            }
+          }
         }
       }
     }
-  
+
     .mouse {
       display: flex;
       justify-content: center;
       align-items: center;
       padding-bottom: 6px;
-  
+
       .scroll {
         position: relative;
         height: 40px;
@@ -137,7 +133,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-  
+
         &::after {
           content: '';
           width: 6px;
@@ -150,7 +146,6 @@
       }
     }
   }
-
 }
 
 @keyframes scrolling {
@@ -160,7 +155,7 @@
   }
   50% {
     transform: translateY(8px);
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     transform: translateY(14px);
@@ -180,15 +175,10 @@
   }
 }
 
-// Animação
 @keyframes show-right {
   from {
     opacity: 0;
-    transform: translate3d(
-      -30px,
-      0,
-      0
-    ); /*Move o conteudo em 3 itens, eixo x; y; z*/
+    transform: translate3d(-30px, 0, 0);
   }
   to {
     opacity: 1;
@@ -196,15 +186,10 @@
   }
 }
 
-// Animações
 @keyframes show-down {
   from {
     opacity: 0;
-    transform: translate3d(
-      0,
-      -30px,
-      0
-    ); /*Move o conteudo em 3 itens, eixo x; y; z*/
+    transform: translate3d(0, -30px, 0);
   }
   to {
     opacity: 1;
@@ -212,7 +197,7 @@
   }
 }
 
-@media (max-width: $bp-01) {
+@media (max-width: 1200px) {
   .introContainer {
     .intro {
       .textMain {
@@ -235,7 +220,7 @@
   }
 }
 
-@media (max-width: $bp-02) {
+@media (max-width: 710px) {
   .introContainer {
     .intro {
       .textMain {
@@ -258,41 +243,21 @@
   }
 }
 
-// @media (max-width: 420px) {
-//   .introContainer {
-//     .wrapper {
-//       .wrapperSocial {
-//         .hideSocial {
-//           // display: none;
-//         }
-//       }
-//     }
-
-// .intro {
-//   .textMain {
-//     p {
-//       //   font-size: 24px;
-//       //   line-height: 36px;
-//       font-size: 12px;
-//       line-height: 20px;
-//       font-weight: 600;
-//     }
-
-//     h1 {
-//       //   font-size: 64px;
-//       //   line-height: 72px;
-//       font-size: 46px;
-//       line-height: 58px;
-//     }
-
-//     .description {
-//       font-size: 12px;
-//       line-height: 20px;
-//     }
-//   }
-//   .btns {
-//     gap: 16px;
-//   }
-// }
-//   }
-// }
+@media (max-width: 500px) {
+  .introContainer {
+    .wrapper {
+      .intro {
+        .textMain {
+          .btns {
+            gap: 20px;
+            .box {
+              font-size: 12px;
+              line-height: 20px;
+              padding: 12px 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

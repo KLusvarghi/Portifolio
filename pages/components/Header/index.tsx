@@ -21,14 +21,13 @@ export default function Header({ otherPage }: Prop) {
       })}
     >
       <Image
-        // o "src" se deve passar a partir da página public, não precisando voltar página por página
         className={styles.log}
         src="/logo.svg"
         alt="Logo do site"
         width={140}
         height={20}
         loading="eager"
-        onError={(e) => console.error('error: ', e.target)} //caso de erro ele exibe no console
+        onError={(e) => console.error('error: ', e.target)}
         onClick={() => router.push('/')}
       />
       <nav
@@ -67,7 +66,6 @@ export default function Header({ otherPage }: Prop) {
                 </Link>
               </span>
             </li>
-
             <li>
               <span className={styles.underline}>
                 <Link
@@ -83,7 +81,6 @@ export default function Header({ otherPage }: Prop) {
                 </Link>
               </span>
             </li>
-
             <li>
               <span className={styles.underline}>
                 <Link
@@ -99,7 +96,6 @@ export default function Header({ otherPage }: Prop) {
                 </Link>
               </span>
             </li>
-
             <li>
               <span className={styles.underline}>
                 <Link

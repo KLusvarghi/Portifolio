@@ -3,7 +3,6 @@ import React from 'react';
 import styles from './Button.module.scss';
 import Link from 'next/link';
 import classNames from 'classnames';
-
 import { useRouter } from 'next/router';
 import { useProject } from '../../context/ProjectContext';
 
@@ -29,7 +28,6 @@ interface ProjectButtonProps {
   onClick?: () => void;
 }
 
-// const Button: React.FC<Props> = ({ children, link, ref, size, windows, propsProjeto }) => {
 const Button = ({
   children,
   size,
@@ -41,7 +39,6 @@ const Button = ({
 }: ProjectButtonProps) => {
   const { setProject } = useProject();
   const router = useRouter();
-
   const navigate = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     if (newWindow) {
@@ -103,10 +100,3 @@ const Button = ({
 };
 
 export default Button;
-
-// if (windows === true && link) {
-//   // navigate({
-//   //   pathname: link,
-//   //   query: { ...propsProje.projeto },
-//   // });
-// }

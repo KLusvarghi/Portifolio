@@ -19,7 +19,6 @@ const Forms = ({ size, setSuccess }: Prop) => {
 
   const sedEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     try {
       if (name === '' || email === '' || subject === '' || message === '') {
         setError(true);
@@ -49,7 +48,6 @@ const Forms = ({ size, setSuccess }: Prop) => {
               console.log(error.text);
             },
           );
-
         setSuccess(true);
         setTimeout(() => {
           setSuccess(false);

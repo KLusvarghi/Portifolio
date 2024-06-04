@@ -8,7 +8,7 @@ interface AnimatedSectionProps {
 
 const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children }) => {
   const { ref, inView } = useInView({
-    triggerOnce: false, // animação ocorre apenas uma vez
+    triggerOnce: true, // animação ocorre apenas uma vez
     threshold: 0.1, // porcentagem do elemento visível antes de disparar
   });
 

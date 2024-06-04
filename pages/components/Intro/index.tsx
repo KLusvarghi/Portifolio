@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './Intro.module.scss';
 import LinkNext from 'next/link';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -56,7 +56,6 @@ export default function Intro() {
               </LinkNext>
             </div>
           </div>
-
           <div className={styles.intro}>
             <div className={styles.textMain}>
               <p>E ai, eu me chamo</p>
@@ -89,19 +88,14 @@ export default function Intro() {
                       spy={true}
                       smooth={true}
                       offset={0}
-                      className={styles.box}
+                      className={classNames({
+                        [styles.box]: true,
+                        [styles.small]: width <= 550 ? true : false,
+                      })}
                       duration={500}
                     >
                       Projetos
                     </Link>
-
-                    {/* <Button
-                size={
-                  width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'
-                }
-                >
-                Projetos
-              </Button> */}
                   </div>
                 </>
               )}
@@ -114,9 +108,6 @@ export default function Intro() {
           >
             <span className={styles.scroll}></span>
           </div>
-          {/* <div className={styles.scroll}>
-            <ExpandMoreIcon className={styles.arrow} />
-          </div> */}
         </div>
       </main>
     </AnimatedSection>

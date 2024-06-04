@@ -12,7 +12,6 @@ import Head from '../Helper/Head';
 import AnimatedSection from '../Helper/AnimatedSection';
 import Loading from '../Helper/Loading';
 
-// export default function Projetos({ params }: { params: { id: string } }) {
 export default function Projetos() {
   const router = useRouter();
   const { project } = useProject();

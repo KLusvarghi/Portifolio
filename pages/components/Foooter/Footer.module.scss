@@ -9,10 +9,10 @@
   .wrapper {
     padding: 80px 200px 60px;
     display: grid;
+    grid-template-columns: 32.5% 32.5% 35%;
     grid-template-areas:
       'me me  social'
       'direitos direitos  direitos';
-    grid-template-columns: 32.5% 32.5% 35%;
 
     .me {
       grid-area: me;
@@ -137,11 +137,11 @@
         'me me'
         'direitos direitos';
 
-        .me{
-          .image{
-            display: none;
-          }
+      .me {
+        .image {
+          display: none;
         }
+      }
 
       .social {
         justify-self: flex-start;
@@ -156,9 +156,8 @@
     .wrapper {
       padding: 60px 60px 40px;
 
-      .direitos{
-      align-items: flex-start;
-
+      .direitos {
+        align-items: flex-start;
       }
     }
   }

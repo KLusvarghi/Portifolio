@@ -14,7 +14,7 @@
 
   .log {
     cursor: pointer;
-    transition: .1s;
+    transition: 0.1s;
 
     &:hover {
       transform: scale(1.05);
@@ -57,7 +57,6 @@
   justify-content: center;
   align-items: center;
 
-  // botão hamburger
   .btnMobile {
     border: none;
     background-color: transparent;
@@ -69,7 +68,6 @@
     padding: 0.5rem;
   }
 
-  // menu em si
   .menu {
     display: flex;
     align-items: center;
@@ -80,7 +78,6 @@
       justify-content: center;
 
       &:hover {
-        // animação de focus
         li {
           &:not(:hover) {
             color: $c10;
@@ -90,7 +87,6 @@
         }
       }
 
-      // animação underline
       li {
         cursor: pointer;
 
@@ -133,7 +129,6 @@
   }
 }
 
-// Responsivo abaixo de 1000px
 @media (max-width: 1200px) {
   .headerContainer {
     height: 60px;
@@ -234,7 +229,6 @@
   }
 }
 
-// Responsivo abaixo de 700px
 @media (max-width: 700px) {
   .headerContainer {
     .active {

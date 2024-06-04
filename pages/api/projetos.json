@@ -13,7 +13,7 @@
   {
     "id": 2,
     "nome": "cardápio aluroni",
-    "preDescricao": "O projeto de cardápio permite aos usuários realizar buscas e filtrar o tipo de comida desejada, seja por preço, porção ou quantidade de pessoas atendidas. Desenvolvido com React e TypeScript, o objetivo é fornecer uma tipagem precisa para a linguagem, garantindo uma experiência mais segura e eficiente.",
+    "preDescricao": "O projeto de cardápio permite aos usuários realizar buscas e filtrar o tipo de comida desejada, seja por preço, porção ou quantidade de pessoas atendidas. Desenvolvido com React e TypeScript, o objetivo é garantir uma experiência mais segura e eficiente.",
     "descricao": "O Cardápio Aluroni desenvolvido junto ao professor Luiz Fernando Ribeiro, durante o curso de React, com uma ênfase especial no módulo de 'Lidando com Arquivos Estáticos' da alura. Neste projeto, mergulhamos profundamente na essência de como lidar com arquivos estáticos, reconhecendo sua importância crítica para garantir a entrega eficiente e confiável de recursos essenciais. Utilizando técnicas avançadas para otimizar a performance e a acessibilidade do site, assegurando que os estilos visuais sejam polidos e os scripts interativos estejam fluidos. O Cardápio Aluroni transcende a mera funcionalidade, pois busca proporcionar uma experiência de uso verdadeiramente envolvente e gratificante. Ao entregar recursos de forma rápida e confiável, não apenas cumprimos os objetivos do projeto, mas também elevamos os padrões de excelência no desenvolvimento web.",
     "tecnologias": ["typescript", "react", "sass"],
     "site": "https://cardapio-aluroni.vercel.app/cardapio",

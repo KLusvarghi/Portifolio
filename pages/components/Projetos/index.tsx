@@ -28,11 +28,10 @@ export default function Projetos() {
             </p>
           </div>
         </AnimatedSection>
-
         <div className={styles.content}>
           <AnimatedSection>
             {api.slice(0, visibleItems).map((projeto, index) => (
-              <div key={index} className={styles.projetoContainer}>
+              <div key={index} className={styles.wrapperProjeto}>
                 <div className={styles.imageContainer}>
                   <Image
                     className={styles.image}
@@ -47,25 +46,26 @@ export default function Projetos() {
                 <div className={styles.description}>
                   <h2>{projeto.nome}</h2>
                   <p>{projeto.preDescricao}</p>
-                  <Button
-                    newWindow={true}
-                    link={projeto.linkTo}
-                    projeto={projeto}
-                    size={
-                      width <= 570
-                        ? 'small'
-                        : width <= 1200
-                        ? 'medium'
-                        : 'normal'
-                    }
-                  >
-                    Mais sobre
-                  </Button>
+                  <div className={styles.btn}>
+                    <Button
+                      newWindow={true}
+                      link={projeto.linkTo}
+                      projeto={projeto}
+                      size={
+                        width <= 570
+                          ? 'small'
+                          : width <= 1200
+                          ? 'medium'
+                          : 'normal'
+                      }
+                    >
+                      Mais sobre
+                    </Button>
+                  </div>
                 </div>
               </div>
             ))}
           </AnimatedSection>
-
           {visibleItems < api.length && (
             <p className={styles.seeMore} onClick={showMoreItems}>
               Ver mais projetos 💻

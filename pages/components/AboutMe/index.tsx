@@ -36,7 +36,6 @@ export default function AboutMe() {
         setRepos(0)
       }
     };
-
     fetchRespGit();
   });
 
