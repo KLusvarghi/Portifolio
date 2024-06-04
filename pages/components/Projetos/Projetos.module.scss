@@ -93,6 +93,11 @@
             margin-bottom: 26px;
             font-weight: 400;
           }
+
+          .btn{
+            max-width: 50%;
+            height: 50%;
+          }
         }
       }
 
@@ -114,7 +119,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1060px) {
   .projetosContainer {
     .wrapper {
       .title {

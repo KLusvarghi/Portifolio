@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <style jsx global>{`
         body::-webkit-scrollbar {
-          width: 10px;
+          width: 8px;
         }
 
         body::-webkit-scrollbar-track {
@@ -22,11 +22,10 @@ export default function Home() {
 
         body::-webkit-scrollbar-thumb {
           background: #8aa9bd;
-          border-radius: 4px;
         }
 
         body::-webkit-scrollbar-thumb:hover {
-          background: #3e80aa;
+          background: #555;
         }
       `}</style>
 

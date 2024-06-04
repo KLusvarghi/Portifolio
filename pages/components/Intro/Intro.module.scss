@@ -250,11 +250,26 @@
         .textMain {
           .btns {
             gap: 20px;
+
             .box {
               font-size: 12px;
               line-height: 20px;
               padding: 12px 28px;
             }
+          }
+          p {
+            font-size: 20px;
+            line-height: 32px;
+          }
+
+          .typing {
+            font-size: 52px;
+            line-height: 64px;
+          }
+
+          .subTitle {
+            font-size: 20px;
+            line-height: 32px;
           }
         }
       }

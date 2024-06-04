@@ -16,7 +16,7 @@
 
     .wrapper {
       max-width: 82rem;
-      padding: 8rem;
+      padding: 4rem 8rem;
 
       .ArrowBack {
         align-self: flex-start;
@@ -49,7 +49,7 @@
         }
 
         .imageContainer {
-          width: 100%;
+          width: 80%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -68,16 +68,16 @@
           h2 {
             text-transform: capitalize;
             font-family: $font-3;
-            font-size: 34px;
-            line-height: 42px;
+            font-size: 28px;
+            line-height: 36px;
             color: $c9;
           }
 
           p {
             font-family: $font-3;
             font-weight: 400;
-            font-size: 22px;
-            line-height: 28px;
+            font-size: 20px;
+            line-height: 26px;
             color: $c8;
           }
         }
@@ -88,8 +88,8 @@
           h2 {
             text-transform: capitalize;
             font-family: $font-3;
-            font-size: 34px;
-            line-height: 42px;
+            font-size: 28px;
+            line-height: 36px;
             color: $c9;
           }
 
@@ -127,8 +127,8 @@
           h2 {
             text-transform: capitalize;
             font-family: $font-3;
-            font-size: 34px;
-            line-height: 42px;
+            font-size: 28px;
+            line-height: 36px;
             line-height: 0px;
             color: $c9;
           }
