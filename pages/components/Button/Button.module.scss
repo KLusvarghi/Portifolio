@@ -1,44 +1,43 @@
 @import '../../../src/theme/variaveis';
 
+.expand{
+  width: 100% !important;
+}
+
 .button {
   display: flex;
   flex-direction: row;
   font-family: $font-3;
   
-  .box {
-    text-transform: uppercase;
+  .standard {
+    text-align: center;
+    width: 100% !important;
     display: inline-block;
-    text-decoration: none;
     cursor: pointer;
-    transition: ease-in-out 0.3s;
+    padding: 16px 32px;
     font-size: 18px;
+    letter-spacing: 1.2px;
     line-height: 24px;
     font-weight: 700;
-    letter-spacing: 1.2px;
-    padding: 16px 32px;
+    text-decoration: none;
+    text-transform: uppercase;
     border-radius: 5px;
+  }
+  
+  .box {
+    transition: ease-in-out 0.3s;
     border: 2px solid $m1;
     color: $c2 !important;
     background-color: $m1;
 
     &:hover {
-      box-shadow: inset 300px 0 0 0 $c1;
+      box-shadow: inset 500px 0 0 0 $c1;
       color: $m1 !important;
     }
   }
 
-  .boxTransp{
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
+  .boxTransp {
     transition: ease-in-out 0.3s;
-  
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    padding: 16px 32px;
-    border-radius: 5px;
     border: 2px solid transparent;
     color: $m1 !important;
 
@@ -47,17 +46,8 @@
     }
   }
 
-  .boxOutline{
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
+  .boxOutline {
     transition: ease-in-out 0.3s;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    padding: 16px 32px;
-    border-radius: 5px;
     border: 2px solid $m1;
     color: $m1 !important;
 
@@ -68,18 +58,20 @@
   }
 }
 
-.medium{
-  .box{
+.medium {
+  .box,
+  .boxTransp,
+  .boxOutline {
     font-size: 16px;
-    line-height: 20px;
     padding: 14px 28px;
   }
 }
 
-.small{
-  .box{
+.small {
+  .box,
+  .boxTransp,
+  .boxOutline {
     font-size: 12px;
-    line-height: 20px;
     padding: 12px 28px;
   }
 }

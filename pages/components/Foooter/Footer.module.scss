@@ -102,6 +102,7 @@
         line-height: 18px;
         font-weight: 400;
         color: $c2;
+        text-align: center;
       }
 
       span {
@@ -157,7 +158,9 @@
       padding: 60px 60px 40px;
 
       .direitos {
-        align-items: flex-start;
+        p {
+          text-align: left;
+        }
       }
     }
   }

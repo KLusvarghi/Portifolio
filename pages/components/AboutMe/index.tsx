@@ -6,7 +6,7 @@ import UseWindowSize from '../../Helper/windowSize';
 import AnimatedSection from '../../Helper/AnimatedSection';
 
 export default function AboutMe() {
-  const [repos, setRepos] = useState(0)
+  const [repos, setRepos] = useState(0);
   const width = UseWindowSize();
   const technology = [
     'html',
@@ -30,10 +30,10 @@ export default function AboutMe() {
           'https://api.github.com/users/KLusvarghi/repos',
         );
         const data = await repos.json();
-        setRepos(data.length)
+        setRepos(data.length);
       } catch (err) {
-        console.log('Erro ao carregar os repositórios do github.', err)
-        setRepos(0)
+        console.log('Erro ao carregar os repositórios do github.', err);
+        setRepos(0);
       }
     };
     fetchRespGit();
@@ -116,6 +116,7 @@ export default function AboutMe() {
                     width <= 650 ? 'small' : width <= 1200 ? 'medium' : 'normal'
                   }
                   link="https://drive.google.com/file/d/15YoWCl9BiAazKIh6NmqVAz5L0EMGUd0o/view?usp=sharing"
+                  type="padrao"
                 >
                   Open Cv on drive
                 </Button>

@@ -48,7 +48,7 @@ export default function Projetos() {
                   <p>{projeto.preDescricao}</p>
                   <div className={styles.btn}>
                     <Button
-                      newWindow={true}
+                      internalNavigation={true}
                       link={projeto.linkTo}
                       projeto={projeto}
                       size={
@@ -58,6 +58,7 @@ export default function Projetos() {
                           ? 'medium'
                           : 'normal'
                       }
+                      type="padrao"
                     >
                       Mais sobre
                     </Button>

@@ -22,18 +22,20 @@ interface ProjectButtonProps {
   children: string;
   link?: string;
   size?: string;
-  newWindow?: boolean;
+  internalNavigation?: boolean;
+  expand?: boolean;
   projeto?: ProjetoInterface;
-  type?: 'transparent' | 'outline' | '';
+  type?: 'transparent' | 'outline' | 'padrao' | string;
   onClick?: () => void;
 }
 
 const Button = ({
   children,
   size,
-  newWindow,
+  internalNavigation,
   link,
   projeto,
+  expand,
   type,
   onClick,
 }: ProjectButtonProps) => {
@@ -41,7 +43,7 @@ const Button = ({
   const router = useRouter();
   const navigate = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    if (newWindow) {
+    if (internalNavigation) {
       if (projeto) setProject(projeto);
       setTimeout(() => {
         router.push(`/${link}`);
@@ -50,52 +52,35 @@ const Button = ({
     }
   };
 
+  const getButtonClass = () =>
+    classNames({
+      [styles.expand]: expand,
+      [styles.standard]: true,
+      [styles.boxTransp]: type == 'transparent' ? true : false,
+      [styles.boxOutline]: type == 'outline' ? true : false,
+      [styles.box]: type == 'padrao' ? true : false,
+    });
+
   return (
-    <>
-      {newWindow ? (
-        <div
-          className={classNames({
-            [styles.button]: true,
-            [styles.medium]: size === 'medium',
-            [styles.small]: size === 'small',
-          })}
-        >
-          <Link
-            onClick={(e) => navigate(e)}
-            className={styles.box}
-            href={link ? link : '/'}
-            target="_blank"
-            replace
-          >
-            {children}
-          </Link>
-        </div>
-      ) : (
-        <div
-          className={classNames({
-            [styles.button]: true,
-            [styles.medium]: size === 'medium',
-            [styles.small]: size === 'small',
-          })}
-        >
-          <Link
-            onClick={onClick}
-            className={
-              type == 'transparent'
-                ? styles.boxTransp
-                : type == 'outline'
-                ? styles.boxOutline
-                : styles.box
-            }
-            href={link ? link : '/'}
-            target={onClick ? '' : '_blank'}
-            replace
-          >
-            {children ? children : 'Mais Sobre'}
-          </Link>
-        </div>
-      )}
-    </>
+    <div
+      className={classNames({
+        [styles.button]: true,
+        
+        [styles.standard]: true,
+        [styles.medium]: size === 'medium',
+        [styles.small]: size === 'small',
+      })}
+    >
+      <Link
+        onClick={!internalNavigation ? onClick : (e) => navigate(e)}
+        className={getButtonClass()}
+        href={link ? link : '/'}
+        target={onClick ? '' : '_blank'}
+        replace
+      >
+        {children ? children : 'Mais Sobre'}
+      </Link>
+    </div>
   );
 };
 

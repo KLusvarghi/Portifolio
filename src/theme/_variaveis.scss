@@ -19,16 +19,16 @@ $c11: #111111;
 $c12: #000000;
 
 // Cores principais
-$m0: #DFEFF9;
-$m1: #3E80AA;
-$m2: #225E84;
+$m0: #dfeff9;
+$m1: #3e80aa;
+$m2: #225e84;
+$m3: #8aa9bd;
 
 // backgrounds
 $b0: #f1f7fb;
 $b1: #141414;
 $bgradient0: rgba(223, 239, 249, 95%);
-$bSocial: #EEF6FB;
-
+$bSocial: #eef6fb;
 
 // Font
 $font-1: 'Poppins';
@@ -41,19 +41,3 @@ $bp-01-01: 940px;
 $bp-02: 710px;
 $bp-02-02: 650px;
 $bp-03: 450px;
-
-// Animação
-@keyframes show-right {
-  from {
-    opacity: 0;
-    transform: translate3d(
-      -30px,
-      0,
-      0
-    ); /*Move o conteudo em 3 itens, eixo x; y; z*/
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
