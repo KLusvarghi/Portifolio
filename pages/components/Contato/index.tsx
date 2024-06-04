@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Contato.module.scss';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Forms from './Form';
 import AnimatedSection from '../../Helper/AnimatedSection';
+import UseWindowSize from '../../Helper/windowSize';
 
 export default function Contato() {
+  const width = UseWindowSize();
+  const [sucess, setSucces] = useState(false);
+
   return (
     <main id="contact" className={styles.contatoContainer}>
+      {sucess && (
+        <div className={styles.sucessMessage}>
+          <p>Email enviado com sucesso!</p>
+        </div>
+      )}
       <div className={styles.wrapper}>
         <AnimatedSection>
           <div className={styles.title}>
@@ -47,7 +56,7 @@ export default function Contato() {
               </div>
             </div>
             <div className={styles.form}>
-              <Forms />
+              <Forms setSuccess={setSucces} size={width} />
             </div>
           </div>
         </AnimatedSection>

@@ -1,20 +1,21 @@
 @import '../../../../src/theme/variaveis';
 
 .formContainer {
-  .contact {
+  .container {
     display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 32px;
+    // column-gap: 32px;
     row-gap: 20px;
+    
     grid-template-areas:
       'nome email'
       'assunto assunto'
       'mensagem mensagem'
-      'btn btn';
+      'btn btn'
   }
 
   .name {
     grid-area: nome;
+    margin-right: 20px;
   }
 
   .email {
@@ -52,6 +53,7 @@
       resize: none;
       border: none;
       border-radius: 5px;
+      color: $c9;
 
       &:focus {
         outline: none;
@@ -65,7 +67,6 @@
     font-family: $font-2;
     font-weight: 400;
     font-size: 14px;
-    color: $c7;
   }
 
   .btn {
@@ -88,14 +89,20 @@
 
     color: $c2 !important;
     background-color: $m1;
+
     &:hover {
-      box-shadow: inset 300px 0 0 0 $c1;
+      box-shadow: inset 500px 0 0 0 $c1;
       color: $m1 !important;
     }
   }
 
+  
+  .expand{
+    width: 100% ;
+  }
+
   .loading {
-    box-shadow: inset 300px 0 0 0 $c1;
+    box-shadow: inset 500px 0 0 0 $c1;
     color: $m1 !important;
     cursor: wait;
     opacity: .5;
@@ -105,4 +112,5 @@
       background-color: none;
     }
   }
+
 }

@@ -4,47 +4,62 @@ import emailjs from '@emailjs/browser';
 import classNames from 'classnames';
 import Error from '../../../Helper/Error';
 
-const Forms = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+interface Prop {
+  size: number;
+  setSuccess: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Forms = ({ size, setSuccess }: Prop) => {
+  const [name, setName] = useState('kaua');
+  const [email, setEmail] = useState('kaua@lusvarghi');
+  const [subject, setSubject] = useState('dwada');
+  const [message, setMessage] = useState('dawdwads');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [sucess, setSucces] = useState(false);
 
   const sedEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-    } catch (error) {}
-    if (name === '' || email === '' || subject === '' || message === '') {
+      if (name === '' || email === '' || subject === '' || message === '') {
+        setError(true);
+        return;
+      } else {
+        setLoading(true);
+        const templateParams = {
+          name: name,
+          subject: subject,
+          message: message,
+          email: email,
+        };
+        setError(false);
+        emailjs
+          .send(
+            'service_9yq346d',
+            'template_fze75s6',
+            templateParams,
+            'RogZHWFmgc7vGw9e2',
+          )
+          .then(
+            (response) => {
+              console.log(response.text);
+              console.log(response.status);
+            },
+            (error) => {
+              console.log(error.text);
+            },
+          );
+
+        setSuccess(true);
+        setTimeout(() => {
+          setSuccess(false);
+        }, 3000);
+        return;
+      }
+    } catch (err) {
+      console.log(err);
       setError(true);
-    } else {
-      setLoading(true);
-      const templateParams = {
-        name: name,
-        subject: subject,
-        message: message,
-        email: email,
-      };
-      setError(false);
-      emailjs
-        .send(
-          'service_9yq346d',
-          'template_fze75s6',
-          templateParams,
-          'RogZHWFmgc7vGw9e2',
-        )
-        .then(
-          (response) => {
-            console.log(response.text);
-            console.log(response.status);
-          },
-          (error) => {
-            console.log(error.text);
-          },
-        );
+    } finally {
       setName('');
       setEmail('');
       setSubject('');
@@ -55,7 +70,7 @@ const Forms = () => {
 
   return (
     <main className={styles.formContainer}>
-      <form onSubmit={(e) => sedEmail(e)} className={styles.contact}>
+      <form onSubmit={(e) => sedEmail(e)} className={styles.container}>
         <div className={styles.name}>
           <p>Nome</p>
           <input
@@ -104,13 +119,21 @@ const Forms = () => {
             className={classNames({
               [styles.loading]: true,
               [styles.btn]: true,
+              [styles.expand]: size <= 524 ? true : false,
             })}
             disabled
           >
             Enviando mensagem...
           </button>
         ) : (
-          <button className={styles.btn}>Enviar mensagem</button>
+          <button
+            className={classNames({
+              [styles.btn]: true,
+              [styles.expand]: size <= 524 ? true : false,
+            })}
+          >
+            Enviar mensagem
+          </button>
         )}
       </form>
     </main>
