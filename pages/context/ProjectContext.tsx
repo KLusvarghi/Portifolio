@@ -42,6 +42,8 @@ export const ProjectProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
+export default ProjectContext;
+
 export const useProject = () => {
   const context = useContext(ProjectContext);
   if (!context) {
