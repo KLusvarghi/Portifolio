@@ -5,7 +5,6 @@ import { AppCacheProvider } from '@mui/material-nextjs/v14-pagesRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '../src/theme/theme';
-import { ProjectProvider } from '../pages/context/ProjectContext';
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
@@ -20,16 +19,14 @@ export default function MyApp(props: AppProps) {
 
   return (
     <AppCacheProvider {...props}>
-      <ProjectProvider>
-        <Head>
-          <meta name="viewport" content="initial-scale=1, width=device-width" />
-        </Head>
-        <ThemeProvider theme={theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </ProjectProvider>
+      <Head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </AppCacheProvider>
   );
 }

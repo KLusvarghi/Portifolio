@@ -4,7 +4,6 @@ import styles from './Button.module.scss';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
-import { useProject } from '../../context/ProjectContext';
 
 interface ProjetoInterface {
   id: number;
@@ -39,15 +38,17 @@ const Button = ({
   type,
   onClick,
 }: ProjectButtonProps) => {
-  const { setProject } = useProject();
   const router = useRouter();
   const navigate = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    console.log(projeto);
     if (internalNavigation) {
-      if (projeto) setProject(projeto);
-      setTimeout(() => {
-        router.push(`/${link}`);
-      }, 1000);
+      if (projeto) {
+        setTimeout(() => {
+          localStorage.setItem('project', JSON.stringify(projeto));
+          router.push(`/${link}`);
+        }, 1000);
+      }
     } else {
     }
   };
@@ -65,7 +66,7 @@ const Button = ({
     <div
       className={classNames({
         [styles.button]: true,
-        
+
         [styles.standard]: true,
         [styles.medium]: size === 'medium',
         [styles.small]: size === 'small',

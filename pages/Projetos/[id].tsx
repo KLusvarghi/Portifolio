@@ -2,7 +2,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Foooter';
 import { useEffect, useState } from 'react';
-import { useProject } from '../context/ProjectContext';
 import { useRouter } from 'next/navigation';
 import styles from './Projeto.module.scss';
 import Image from 'next/image';
@@ -13,41 +12,45 @@ import AnimatedSection from '../Helper/AnimatedSection';
 import Loading from '../Helper/Loading';
 import UseWindowSize from '../../pages/Helper/windowSize';
 
+interface ProjetoInterface {
+  id: number;
+  nome: string;
+  preDescricao: string;
+  descricao: string;
+  tecnologias: string[];
+  site: string;
+  linkRepositorio: string;
+  image: string;
+  linkTo: string;
+}
+
 export default function Projetos() {
   const router = useRouter();
-  const { project } = useProject();
-  const [projectLocal, setProjectLocal] = useState<string | null>(null);
-  const [loading, setLoading] = useState<string | null>(null);
+  const [projectObject, setProjectObject] = useState<ProjetoInterface | null>(
+    null,
+  );
   const width = UseWindowSize();
-
   const navigationToBack = () => {
     router.back();
   };
 
   useEffect(() => {
-    setLoading(localStorage.getItem('project'));
-  }, []);
-
-  useEffect(() => {
-    setProjectLocal(localStorage.getItem('project'));
-    if (!localStorage.getItem('project')) {
+    const string = localStorage.getItem('project');
+    if (typeof window !== 'undefined') {
+      if (string) setProjectObject(JSON.parse(string));
+    }
+    if (!string) {
       setTimeout(() => {
         router.push('/');
-      }, 1400);
+      }, 1500);
     }
   }, [router]);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setProjectLocal(localStorage.getItem('project'));
-    }
-  }, [router, projectLocal]);
-
   return (
     <>
-      <Head title={`Projeto - ${project?.nome}`} />
+      <Head title={`Projeto - ${projectObject?.nome}`} />
       <Header otherPage={true} />
-      {!loading && (
+      {!projectObject && (
         <>
           <Head title={`Projeto não encontrado - Redirecionando...`} />
           <Loading />
@@ -63,13 +66,13 @@ export default function Projetos() {
                   onClick={() => navigationToBack()}
                 />
                 <div className={styles.title}>
-                  <h1>{project?.nome}</h1>
-                  {project ? (
+                  <h1>{projectObject?.nome}</h1>
+                  {projectObject ? (
                     <div className={styles.imageContainer}>
                       <Image
                         className={styles.image}
-                        src={project.image}
-                        alt={`imagem ilustrativa do projeto ${project?.nome}`}
+                        src={projectObject.image}
+                        alt={`imagem ilustrativa do projeto ${projectObject?.nome}`}
                         width={600}
                         height={500}
                         loading="eager"
@@ -89,12 +92,12 @@ export default function Projetos() {
               <div className={styles.content}>
                 <div className={styles.description}>
                   <h2>visão geral do projeto</h2>
-                  <p>{project?.descricao}</p>
+                  <p>{projectObject?.descricao}</p>
                 </div>
                 <div className={styles.tecnologias}>
                   <h2>tecnologias utilizada</h2>
                   <div className={styles.containerTec}>
-                    {project?.tecnologias.map((tec, index) => (
+                    {projectObject?.tecnologias.map((tec, index) => (
                       <span className={styles.tec} key={index}>
                         {tec}
                       </span>
@@ -114,7 +117,7 @@ export default function Projetos() {
                             ? 'medium'
                             : 'padrao'
                         }
-                        link={project?.site}
+                        link={projectObject?.site}
                         type="padrao"
                       >
                         ver projeto
@@ -130,7 +133,7 @@ export default function Projetos() {
                             ? 'medium'
                             : 'padrao'
                         }
-                        link={project?.linkRepositorio}
+                        link={projectObject?.linkRepositorio}
                         type={width <= 510 ? 'outline' : 'transparent'}
                       >
                         repositório
