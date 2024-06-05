@@ -14,7 +14,7 @@ export default function Footer() {
   const profileImageUrl = 'https://media.licdn.com/dms/image/C4D03AQGgcU2hxMQ7rw/profile-displayphoto-shrink_800_800/0/1664198488709?e=1723075200&v=beta&t=RxBIXF-5RCu9U4KEp5zZfXGWHTPeGfUX1Z3OQtnc3ZE';
 
   return (
-    <main className={styles.footerContainer}>
+    <main id="footer" className={styles.footerContainer}>
       <div className={styles.wrapper}>
         <div className={styles.me}>
           <Image

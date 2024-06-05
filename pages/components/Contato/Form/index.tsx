@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './Forms.module.scss';
 import emailjs from '@emailjs/browser';
 import classNames from 'classnames';
@@ -51,7 +51,7 @@ const Forms = ({ size, setSuccess }: Prop) => {
         setSuccess(true);
         setTimeout(() => {
           setSuccess(false);
-        }, 3000);
+        }, 5000);
         return;
       }
     } catch (err) {

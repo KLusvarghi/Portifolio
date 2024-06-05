@@ -6,6 +6,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Forms from './Form';
 import AnimatedSection from '../../Helper/AnimatedSection';
 import UseWindowSize from '../../Helper/windowSize';
+import Image from 'next/image';
 
 export default function Contato() {
   const width = UseWindowSize();
@@ -15,7 +16,21 @@ export default function Contato() {
     <main id="contact" className={styles.contatoContainer}>
       {sucess && (
         <div className={styles.sucessMessage}>
-          <p>Email enviado com sucesso!</p>
+          <div className={styles.wrapperMessage}>
+            <div className={styles.imageContainer}>
+              <Image
+                className={styles.image}
+                src={'/popup.svg'}
+                alt={'icon ilustrativo meu'}
+                width={200}
+                height={200}
+                loading="eager"
+                onError={(e) => console.error('error: ', e.target)}
+              />
+            </div>
+            <p className={styles.thanks}>Obrigado!</p>
+            <p className={styles.sucess}>Email enviado com sucesso.</p>
+          </div>
         </div>
       )}
       <div className={styles.wrapper}>
