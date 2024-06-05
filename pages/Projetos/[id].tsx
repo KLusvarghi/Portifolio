@@ -29,7 +29,7 @@ export default function Projetos() {
   const [projectObject, setProjectObject] = useState<ProjetoInterface | null>(
     null,
   );
-  const width = UseWindowSize();
+  const width: number = UseWindowSize();
   const navigationToBack = () => {
     router.back();
   };

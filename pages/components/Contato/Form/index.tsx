@@ -10,10 +10,10 @@ interface Prop {
 }
 
 const Forms = ({ size, setSuccess }: Prop) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState('DAS');
+  const [email, setEmail] = useState('kaua@gmail.com');
+  const [subject, setSubject] = useState('adwd');
+  const [message, setMessage] = useState('adwad');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 

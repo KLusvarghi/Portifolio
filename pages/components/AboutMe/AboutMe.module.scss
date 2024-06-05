@@ -142,16 +142,37 @@
             line-height: 24px;
             font-weight: 400;
             border-radius: 5px;
-            transition: 0.2s ease-in-out;
+            // transition: 0.2s ease-in-out;
 
             &:hover {
-              transform: rotate(12deg);
+              animation: shake .8s ease-in-out;
+
               cursor: grab;
             }
           }
         }
       }
     }
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(-10deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(10deg);
   }
 }
 

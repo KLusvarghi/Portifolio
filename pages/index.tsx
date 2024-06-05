@@ -30,7 +30,7 @@ export default function Home() {
       `}</style>
 
       <main className={styles.homeContainer}>
-        <Head title="Home - Portifólio Kauã Ortolani Lusvarghi" />
+        <Head title="Kauã Lusvarghi | Frontend Developer" />
         <Header />
         <Intro />
         <AboutMe />

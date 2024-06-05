@@ -9,18 +9,18 @@ export default function AboutMe() {
   const [repos, setRepos] = useState(0);
   const width = UseWindowSize();
   const technology = [
-    'html',
-    'css',
-    'javascript',
-    'github',
-    'sass',
-    'typescript',
-    'ui',
-    'react',
-    'design responsivo',
-    'git',
-    'next.js',
-    'terminal',
+    'HTML',
+    'CSS',
+    'Javascript',
+    'Github',
+    'SASS',
+    'Typescript',
+    'UI',
+    'React',
+    'Design Responsivo',
+    'Git',
+    'Next.ss',
+    'Terminal',
   ];
 
   useEffect(() => {
