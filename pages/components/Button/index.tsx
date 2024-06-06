@@ -66,7 +66,6 @@ const Button = ({
     <div
       className={classNames({
         [styles.button]: true,
-
         [styles.standard]: true,
         [styles.medium]: size === 'medium',
         [styles.small]: size === 'small',

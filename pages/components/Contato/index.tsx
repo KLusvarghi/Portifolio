@@ -70,7 +70,7 @@ export default function Contato() {
                 </div>
               </div>
             </div>
-            <div className={styles.form}>
+            <div className={styles.form} >
               <Forms setSuccess={setSucces} size={width} />
             </div>
           </div>
