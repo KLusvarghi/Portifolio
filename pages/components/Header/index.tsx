@@ -5,7 +5,6 @@ import styles from './Header.module.scss';
 import classNames from 'classnames';
 import { Link } from 'react-scroll';
 import { useRouter } from 'next/router';
-
 interface Prop {
   otherPage?: boolean;
 }
@@ -28,7 +27,8 @@ export default function Header({ otherPage }: Prop) {
         height={20}
         loading="eager"
         onError={(e) => console.error('error: ', e.target)}
-        onClick={() => router.push('/')}
+        onClick={() => router.push('/')} 
+        priority // Adicione a propriedade priority para priorizar o carregamento
       />
       <nav
         className={classNames({
@@ -44,8 +44,10 @@ export default function Header({ otherPage }: Prop) {
             className={styles.btnMobile}
           >
             <span
-              className={styles.hamburger}
-              style={{ borderTopColor: toggle ? 'transparent' : '' }}
+              className={classNames({
+                [styles.hamburger]: true,
+                [styles.active]: toggle ? true : false,
+              })}
             ></span>
           </button>
         </div>
@@ -55,7 +57,7 @@ export default function Header({ otherPage }: Prop) {
               <span className={styles.underline}>
                 <Link
                   onClick={() => setToggle(!toggle)}
-                  to="home"
+                  to="intro"
                   spy={true}
                   smooth={true}
                   offset={0}

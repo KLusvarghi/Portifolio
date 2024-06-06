@@ -4,6 +4,7 @@ import Button from '../Button';
 import Link from 'next/link';
 import UseWindowSize from '../../Helper/windowSize';
 import AnimatedSection from '../../Helper/AnimatedSection';
+import useContainer from '../../Helper/useContainer';
 
 export default function AboutMe() {
   const [repos, setRepos] = useState(0);
@@ -37,7 +38,7 @@ export default function AboutMe() {
       }
     };
     fetchRespGit();
-  });
+  }, []);
 
   return (
     <main id="about" className={styles.aboutContainer}>

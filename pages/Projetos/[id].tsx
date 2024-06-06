@@ -10,7 +10,7 @@ import Button from '../components/Button';
 import Head from '../Helper/Head';
 import AnimatedSection from '../Helper/AnimatedSection';
 import Loading from '../Helper/Loading';
-import UseWindowSize from '../../pages/Helper/windowSize';
+import UseWindowSize from '../Helper/windowSize';
 
 interface ProjetoInterface {
   id: number;
@@ -77,11 +77,6 @@ export default function Projetos() {
                         height={500}
                         loading="eager"
                         onError={(e) => console.error('error: ', e.target)}
-                        style={{
-                          width: '100%',
-                          height: 'auto',
-                          maxWidth: '100%',
-                        }}
                       />
                     </div>
                   ) : (

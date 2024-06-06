@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function useWhatsIcon() {
-  const [showWhatsAppIcon, setShowWhatsAppIcon] = useState(true);
-  const [showWhatsAppIcon2, setShowWhatsAppIcon2] = useState(true);
+  const [hiddenInIntro, setHiddenInIntro] = useState(true);
+  const [hiddenInFooter, setHiddenInFooter] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const introElement = document.querySelector('#home');
+      const introElement = document.querySelector('#intro');
       const footerElement = document.querySelector('#footer');
       if (introElement) {
-        // console.log(introElement.getBoundingClientRect())
         const rect = introElement.getBoundingClientRect();
-        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-        setShowWhatsAppIcon(!isVisible);
+        const isVisible = rect.top >= 0 && rect.bottom < window.innerHeight;
+        setHiddenInIntro(!isVisible);
       }
       if (footerElement) {
-        const rect = footerElement.getBoundingClientRect();
-        const isVisible =
-          rect.top >= 0 && rect.bottom <= window.innerHeight + 180;
-        setShowWhatsAppIcon2(!isVisible);
+          const rect = footerElement.getBoundingClientRect();
+          const isVisible =
+            rect.top >= 0 && rect.bottom <= window.innerHeight + 260;
+        setHiddenInFooter(!isVisible);
       }
     };
 
@@ -30,5 +29,5 @@ export default function useWhatsIcon() {
     };
   }, []);
 
-  return { showWhatsAppIcon, showWhatsAppIcon2 };
+  return { hiddenInIntro, hiddenInFooter };
 }

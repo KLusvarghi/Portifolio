@@ -140,6 +140,10 @@
       .btnMobile {
         display: flex;
 
+        .active {
+          border-top-color: transparent !important;
+        }
+
         .hamburger {
           width: 20px;
           border-top: 2px solid;
@@ -171,7 +175,7 @@
         visibility: visible;
         background-color: $bgradient0;
         position: absolute;
-        align-items: end;
+        align-items: flex-end;
         top: 58px;
         right: 0;
         z-index: 1000;
@@ -181,13 +185,13 @@
           width: 17vw;
           flex-direction: column;
           row-gap: 16px;
-          align-items: end;
+          align-items: flex-end;
           flex-grow: 1;
           padding: 0;
-          align-items: end;
+          align-items: flex-end;
 
           li {
-            text-align: end;
+            text-align: flex-end;
             font-size: 22px;
             width: 100%;
             padding: 0 10px 0 0;
@@ -229,7 +233,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .headerContainer {
     .active {
       .menu {

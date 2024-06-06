@@ -23,8 +23,18 @@ export default function MyDocument(
   return (
     <Html lang="pt-br">
       <Head>
-        {/* PWA primary color */}
-        <meta name="theme-color" content={theme.palette.primary.main} />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@0,200..900;1,200..900&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@$c7-2: #666;0,200..900;1,200..900&display=swap"
+          rel="stylesheet"
+        ></link>
         <DocumentHeadTags {...props} />
       </Head>
       <body>

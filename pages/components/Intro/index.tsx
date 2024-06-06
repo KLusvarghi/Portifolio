@@ -17,7 +17,7 @@ export default function Intro() {
 
   return (
     <AnimatedSection>
-      <main id="home" className={styles.introContainer}>
+      <main id="intro" className={styles.introContainer}>
         <div className={styles.wrapper}>
           <div className={styles.wrapperSocial}>
             <div

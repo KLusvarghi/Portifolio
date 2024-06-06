@@ -7,7 +7,6 @@ import Projetos from './components/Projetos';
 import Contato from './components/Contato';
 import WhatsApp from './components/WhatsApp';
 
-
 export default function Home() {
   return (
     <>
@@ -28,7 +27,6 @@ export default function Home() {
           background: #555;
         }
       `}</style>
-
       <main>
         <Head title="Kauã Lusvarghi | Frontend Developer" />
         <Header />
@@ -37,7 +35,7 @@ export default function Home() {
         <Projetos />
         <Contato />
         <Footer />
-        <WhatsApp/>
+        <WhatsApp />
       </main>
     </>
   );
