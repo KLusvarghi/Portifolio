@@ -63,7 +63,6 @@
 
         .imageContainer {
           min-width: 200px;
-
           .image {
             flex: 1;
             display: block;
@@ -95,7 +94,7 @@
             font-weight: 400;
           }
 
-          .btn{
+          .btn {
             max-width: 50%;
             height: 50%;
           }
@@ -123,14 +122,6 @@
 @media (max-width: 1060px) {
   .projetosContainer {
     .wrapper {
-      .title {
-        margin-bottom: 40px;
-
-        .subtitle {
-          max-width: 100%;
-        }
-      }
-
       .content {
         .wrapperProjeto {
           grid-template-columns: 1fr;
@@ -154,52 +145,34 @@
   }
 }
 
-@media (max-width: 850px) {
-  .projetosContainer {
-    .wrapper {
-      .content {
-        .wrapperProjeto {
-          grid-gap: 0px;
+// @media (max-width: 850px) {
+//   .projetosContainer {
+//     .wrapper {
+//       .content {
+//         .wrapperProjeto {
+//           // grid-gap: 0px;
 
-          .description {
-            margin-top: -14px;
-          }
-        }
-      }
-    }
-  }
-}
+//           .description {
+//             // margin-top: -14px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media (max-width: 680px) {
   .projetosContainer {
-    padding: 80px 40px 0px;
-
-    .wrapper {
-      .content {
-        .wrapperProjeto {
-          margin-bottom: 20px;
-
-          .description {
-            margin-top: 0px;
-          }
-        }
-      }
-    }
+    padding: 80px 32px 0px;
   }
 }
 
 @media (max-width: 550px) {
   .projetosContainer {
     .wrapper {
-      .title {
-        margin-bottom: 0px;
-      }
-
       .content {
         .wrapperProjeto {
           .description {
-            margin-top: -30px;
-
             h2 {
               font-size: 28px;
               line-height: 32px;
@@ -219,17 +192,9 @@
 @media (max-width: 440px) {
   .projetosContainer {
     .wrapper {
-      .title {
-        margin-bottom: -32px;
-      }
-
       .content {
         .wrapperProjeto {
-          margin-bottom: 0px;
-
           .description {
-            margin-top: -60px;
-
             h2 {
               font-size: 24px;
               line-height: 30px;
@@ -240,10 +205,6 @@
               line-height: 20px;
             }
           }
-        }
-
-        .seeMore {
-          margin-top: 32px;
         }
       }
     }

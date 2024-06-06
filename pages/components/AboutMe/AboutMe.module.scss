@@ -3,7 +3,7 @@
 .aboutContainer {
   background: $b0;
   margin: 0;
-  padding: 112px 120px 76px 120px;
+  padding: 112px 120px 76px;
 
   .wrapper {
     max-width: 120rem;
@@ -236,7 +236,7 @@
 
 @media (max-width: 450px) {
   .aboutContainer {
-    padding: 60px 32px 0px 32px;
+    padding: 60px 32px 0px;
 
     .wrapper {
       .content {

@@ -10,10 +10,10 @@ interface Prop {
 }
 
 const Forms = ({ size, setSuccess }: Prop) => {
-  const [name, setName] = useState('DAS');
-  const [email, setEmail] = useState('kaua@gmail.com');
-  const [subject, setSubject] = useState('adwd');
-  const [message, setMessage] = useState('adwad');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -72,6 +72,8 @@ const Forms = ({ size, setSuccess }: Prop) => {
         <div className={styles.name}>
           <p>Nome</p>
           <input
+            id="name"
+            name="name"
             required
             type="text"
             placeholder="Digite seu nome"
@@ -82,6 +84,8 @@ const Forms = ({ size, setSuccess }: Prop) => {
         <div className={styles.email}>
           <p>Email</p>
           <input
+            id="email"
+            name="email"
             required
             type="email"
             placeholder="Digite seu email"
@@ -92,6 +96,8 @@ const Forms = ({ size, setSuccess }: Prop) => {
         <div className={styles.assunto}>
           <p>Assunto</p>
           <input
+            id="assunto"
+            name="assunto"
             required
             type="text"
             placeholder="Digite o assunto da mensagem"
@@ -103,6 +109,7 @@ const Forms = ({ size, setSuccess }: Prop) => {
           <p>Mensagem</p>
           <textarea
             required
+            id="mensagem"
             name="mensagem"
             cols={30}
             rows={10}

@@ -2,7 +2,7 @@
 
 .contatoContainer {
   margin: 0;
-  padding: 112px 120px 76px 120px;
+  padding: 112px 120px 76px;
   background-image: url('./../../../public/background/bgDown.svg');
   position: relative;
   background-position: center;
@@ -272,7 +272,7 @@
 
 @media (max-width: 750px) {
   .contatoContainer {
-    padding: 80px 40px 60px;
+    padding: 80px 32px 60px 32px;
 
     .sucessMessage {
       top: 36%;
@@ -291,8 +291,6 @@
 
 @media (max-width: 500px) {
   .contatoContainer {
-    padding: 80px 40px 60px;
-
     .sucessMessage {
       top: 36%;
       width: 58%;
@@ -316,8 +314,6 @@
 
 @media (max-width: 390px) {
   .contatoContainer {
-    padding: 80px 40px 60px;
-
     .sucessMessage {
       top: 36%;
       width: 60%;
