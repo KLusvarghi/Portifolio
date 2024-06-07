@@ -41,7 +41,6 @@ const Button = ({
   const router = useRouter();
   const navigate = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    console.log(projeto);
     if (internalNavigation) {
       if (projeto) {
         setTimeout(() => {

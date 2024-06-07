@@ -1,0 +1,131 @@
+@import '../theme/variaveis';
+
+.notFoundContainer {
+  height: 100vh;
+  // overflow-y: hidden;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  .wrapper {
+    max-width: 120rem;
+    margin: auto;
+    padding: 0px 60px;
+
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // h1 {
+    //   margin: 0;
+    //   font-family: $font-3;
+    //   font-size: 42px;
+    //   text-transform: uppercase;
+    // }
+
+    .imageContainer {
+      min-width: 100px;
+      display: flex;
+      justify-content: center;
+      .image {
+        flex: 1;
+        display: block;
+        width: 90%;
+        height: auto;
+      }
+    }
+
+    .text {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        max-width: 72%;
+        margin: 0;
+        font-family: $font-3;
+        font-size: 36px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $c10;
+
+      }
+
+      p {
+        text-align: center;
+        color: $c9;
+        font-family: $font-3;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 812px) {
+  .notFoundContainer {
+    .wrapper {
+      .text {
+        h1 {
+          max-width: 88%;
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 610px) {
+  .notFoundContainer {
+    .wrapper {
+      padding: 0px 20px;
+      .text {
+        h1 {
+          max-width: 100%;
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 455px) {
+  .notFoundContainer {
+    .wrapper {
+      .text {
+        h1 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .notFoundContainer {
+    .wrapper {
+      .text {
+        h1 {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

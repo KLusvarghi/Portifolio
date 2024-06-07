@@ -16,8 +16,8 @@ export default function Intro() {
   const width = UseWindowSize();
 
   return (
-    <AnimatedSection>
-      <main id="intro" className={styles.introContainer}>
+    <main id="intro" className={styles.introContainer}>
+      <AnimatedSection>
         <div className={styles.wrapper}>
           <div className={styles.wrapperSocial}>
             <div
@@ -109,7 +109,7 @@ export default function Intro() {
             <span className={styles.scroll}></span>
           </div>
         </div>
-      </main>
-    </AnimatedSection>
+      </AnimatedSection>
+    </main>
   );
 }

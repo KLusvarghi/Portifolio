@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Home - Portifólio Kauã Lusvarghi',
+  title: 'Kauã Lusvarghi | Frontend Developer',
 };
 
 export default function RootLayout({
