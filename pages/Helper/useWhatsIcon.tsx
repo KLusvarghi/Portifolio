@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function useWhatsIcon() {
+const useWhatsIcon = () => { 
   const [hiddenInIntro, setHiddenInIntro] = useState(true);
   const [hiddenInFooter, setHiddenInFooter] = useState(true);
 
@@ -31,3 +31,5 @@ export default function useWhatsIcon() {
 
   return { hiddenInIntro, hiddenInFooter };
 }
+
+export default useWhatsIcon

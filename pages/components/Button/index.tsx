@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Button.module.scss';
 import Link from 'next/link';
 import classNames from 'classnames';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 interface ProjetoInterface {
   id: number;
@@ -77,7 +77,7 @@ const Button = ({
         target={onClick ? '' : '_blank'}
         replace
       >
-        {children ? children : 'Mais Sobre'}
+        {children}
       </Link>
     </div>
   );

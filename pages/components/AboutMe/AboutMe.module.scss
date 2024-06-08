@@ -1,4 +1,4 @@
-@import '../../../src/theme/variaveis';
+@import '../../../src/styles/variaveis';
 
 .aboutContainer {
   background: $b0;
@@ -145,7 +145,7 @@
             // transition: 0.2s ease-in-out;
 
             &:hover {
-              animation: shake .8s ease-in-out;
+              animation: shake 0.8s ease-in-out;
 
               cursor: grab;
             }

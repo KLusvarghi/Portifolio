@@ -1,3 +1,5 @@
+import '../styles/global.css'
+
 export const metadata = {
   title: 'Kauã Lusvarghi | Frontend Developer',
 };

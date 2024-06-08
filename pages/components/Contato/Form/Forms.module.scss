@@ -1,4 +1,4 @@
-@import '../../../../src/theme/variaveis';
+@import '../../../../src/styles/variaveis';
 
 .formContainer {
   .container {
@@ -8,7 +8,7 @@
       'nome email'
       'assunto assunto'
       'mensagem mensagem'
-      'btn btn'
+      'btn btn';
   }
 
   .name {
@@ -55,13 +55,13 @@
 
       &:focus {
         outline: none;
-        box-shadow: 0 0 0 2px #4B97C8, 0 0 0 3px $m1;
+        box-shadow: 0 0 0 2px #4b97c8, 0 0 0 3px $m1;
       }
     }
   }
 
   textArea {
-    font-family: $font-2;
+    font-family: $font-3;
     font-weight: 400;
     font-size: 14px;
   }
@@ -73,7 +73,7 @@
     text-decoration: none;
     cursor: pointer;
     transition: ease-in-out 0.3s;
-    font: $font-1;
+    font: $font-3;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 1.2px;
@@ -89,19 +89,18 @@
     }
   }
 
-  .expand{
-    width: 100% ;
+  .expand {
+    width: 100%;
   }
 
   .loading {
     box-shadow: inset 500px 0 0 0 $c1;
     color: $m1 !important;
     cursor: wait;
-    opacity: .5;
+    opacity: 0.5;
 
     &:hover {
       background-color: none;
     }
   }
-
 }

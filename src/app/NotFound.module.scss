@@ -1,8 +1,7 @@
-@import '../theme/variaveis';
+@import '../styles/variaveis';
 
 .notFoundContainer {
   height: 100vh;
-  // overflow-y: hidden;
   overflow: hidden;
   box-sizing: border-box;
   margin: 0;
@@ -19,13 +18,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    // h1 {
-    //   margin: 0;
-    //   font-family: $font-3;
-    //   font-size: 42px;
-    //   text-transform: uppercase;
-    // }
 
     .imageContainer {
       min-width: 100px;
@@ -48,13 +40,12 @@
 
       h1 {
         max-width: 72%;
-        margin: 0;
+        margin: 0px 0px 12px 0px;
         font-family: $font-3;
         font-size: 36px;
         text-transform: uppercase;
         text-align: center;
         color: $c10;
-
       }
 
       p {
@@ -62,6 +53,7 @@
         color: $c9;
         font-family: $font-3;
         font-size: 20px;
+        margin-bottom: 20px;
       }
     }
   }

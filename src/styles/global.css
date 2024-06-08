@@ -1,0 +1,16 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; /* ou qualquer outra fonte de sua escolha */
+  background-color: #f1f7fb; /* ou qualquer cor de fundo de sua escolha */
+  color: black; /* ou qualquer cor de texto de sua escolha */
+}
+
+/* Adicionalmente, você pode adicionar um reset CSS mais abrangente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

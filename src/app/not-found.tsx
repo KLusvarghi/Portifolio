@@ -1,16 +1,17 @@
 'use client';
 import React, { useEffect } from 'react';
 import styles from './NotFound.module.scss';
-// import Button from '../Button';
+import Button from '../../pages/components/Button';
 import Image from 'next/image';
-import Head from '../pages/Helper/Head';
-// import { useRouter } from 'next/navigation';
+import Head from '../../pages/Helper/Head';
+import { useRouter } from 'next/navigation';
+import UseWindowSize from '../../pages/Helper/windowSize'
 
 export default function NotFound() {
-  // const router = useRouter();
-
+  const router = useRouter();
+  const width = UseWindowSize()
   const navigationToBack = () => {
-    // router.push('/')
+    router.push('/');
   };
 
   return (
@@ -18,7 +19,6 @@ export default function NotFound() {
       <Head title="404 - Página não encontrada..." />
       <main className={styles.notFoundContainer}>
         <div className={styles.wrapper}>
-          {/* <h1>404</h1> */}
           <div className={styles.imageContainer}>
             <Image
               className={styles.image}
@@ -37,7 +37,15 @@ export default function NotFound() {
               Acho que você escolheu a porta errada, porque eu não consegui dar
               uma olhada na que você está procurando.{' '}
             </p>
-            {/* <Button onClick={() => navigationToBack()}>Voltar ao inicio</Button> */}
+            <Button
+              type="padrao"
+              size={
+                width <= 570 ? 'small' : width <= 1200 ? 'medium' : 'normal'
+              }
+              onClick={() => navigationToBack()}
+            >
+              Voltar ao inicio
+            </Button>
           </div>
         </div>
       </main>

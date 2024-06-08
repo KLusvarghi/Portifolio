@@ -1,28 +1,28 @@
-@import '../../../src/theme/variaveis';
+@import '../../../src/styles/variaveis';
 
-  .loadingContainer {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff10;
-    backdrop-filter: blur(4px);
-    position: absolute;
-    overflow: hidden;
-    flex: 100;
-    position: fixed;
+.loadingContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff10;
+  backdrop-filter: blur(4px);
+  position: absolute;
+  overflow: hidden;
+  flex: 100;
+  position: fixed;
 
-    .spinner {
-      height: 60px;
-      width: 60px;
-      border: 8px solid rgba(0, 0, 0, 0.2);
-      border-left-color: $m2;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
+  .spinner {
+    height: 60px;
+    width: 60px;
+    border: 8px solid rgba(0, 0, 0, 0.2);
+    border-left-color: $m2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
   }
+}
 
 @keyframes spin {
   to {

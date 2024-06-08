@@ -115,7 +115,7 @@ export default function AboutMe() {
                   size={
                     width <= 650 ? 'small' : width <= 1200 ? 'medium' : 'normal'
                   }
-                  link="https://drive.google.com/file/d/15YoWCl9BiAazKIh6NmqVAz5L0EMGUd0o/view?usp=sharing"
+                  link="https://drive.google.com/file/d/1Wl-DoHlcMQJAxjpF7UaL5RIGcf5OEsFq/view?usp=sharing"
                   type="padrao"
                 >
                   Open Cv on drive

@@ -1,12 +1,12 @@
-@import '../../../src/theme/variaveis';
+@import '../../../src/styles/variaveis';
 
 .homeContainer {
   .active {
     animation: growAndFadeIn 0.5s forwards;
   }
-  
+
   .inactive {
-    animation: shrinkAndFadeOut .5s forwards;
+    animation: shrinkAndFadeOut 0.5s forwards;
   }
 
   .messageContainer {
@@ -182,12 +182,11 @@
 
 @keyframes shrinkAndFadeOut {
   0% {
-    transform: scale(1) ;
+    transform: scale(1);
     opacity: 1;
-
   }
   100% {
-    transform: scale(0.5) ;
+    transform: scale(0.5);
     opacity: 0;
   }
 }

@@ -1,4 +1,4 @@
-@import '../../../src/theme/variaveis';
+@import '../../../src/styles/variaveis';
 
 .contatoContainer {
   margin: 0;
@@ -237,12 +237,12 @@
       height: 34%;
       padding: 12px 28px;
 
-      .wrapperMessage{
+      .wrapperMessage {
         .thanks {
           font-size: 26px;
           line-height: 38px;
         }
-  
+
         .sucess {
           font-size: 20px;
           line-height: 28px;
@@ -297,12 +297,12 @@
       height: 30%;
       padding: 12px 28px;
 
-      .wrapperMessage{
+      .wrapperMessage {
         .thanks {
           font-size: 22px;
           line-height: 34px;
         }
-  
+
         .sucess {
           font-size: 18px;
           line-height: 24px;
@@ -320,12 +320,12 @@
       height: 28%;
       padding: 12px 28px;
 
-      .wrapperMessage{
+      .wrapperMessage {
         .thanks {
           font-size: 20px;
           line-height: 32px;
         }
-  
+
         .sucess {
           font-size: 16px;
           line-height: 22px;

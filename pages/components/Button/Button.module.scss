@@ -1,6 +1,6 @@
-@import '../../../src/theme/variaveis';
+@import '../../../src/styles/variaveis';
 
-.expand{
+.expand {
   width: 100% !important;
 }
 
@@ -23,7 +23,7 @@
     text-transform: uppercase;
     border-radius: 5px;
   }
-  
+
   .box {
     transition: ease-in-out 0.3s;
     border: 2px solid $m1;

@@ -4,7 +4,7 @@ interface Prop {
   container: string;
 }
 
-export default function useContainer({ container }: Prop = { container: "" }) {
+const useContainer = ({ container }: Prop = { container: "" }) => {
   const [isContainer, setIsContainer] = useState(false);
   const [containerElement, setContainerElement] = useState<Element | null>(null);
 
@@ -32,3 +32,5 @@ export default function useContainer({ container }: Prop = { container: "" }) {
 
   return { isContainer };
 }
+
+export default useContainer;
