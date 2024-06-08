@@ -54,51 +54,55 @@ export default function Projeto() {
     setProjetosData(nameProject);
   }, [params?.id]);
 
-  // ------------------------------------------------------------------------------------- nao mexer daq pra cima
-
   useEffect(() => {
     // caso tenha sido direconado com o click do "botao"
     const string = localStorage.getItem('project');
     if (typeof window !== 'undefined') {
       if (string) {
         setProjectObject(JSON.parse(string));
-      } else {
-        // verifica se o paramentro e a lista de projeto com id e linkTo existe
-        const verifica = () => {
-          let cont = 1;
-          if (projetosData && params?.id) {
-            for (let i = 0; i < projetosData.length; i++) {
-              if (projetosData[i].linkTo === params.id) {
-                //verifica se algum projeto bate com o nome do projeto que recebe de parametro
-                cont++
-                return true;
-              } else if (projetosData.length - 1 === i && cont == 1) {
-                //caso depois de percorrer todos os projetos e nenhum corremponder dele:
-                console.log('Nomes não bateram')
-                localStorage.removeItem('project');
-                setProjectObject(null);
-                setTimeout(() => {
-                  router.push('/404');
-                }, 1800);
-              }
-            }
+      } else if (projetosData) {
+        console.log('entrou aqui');
+        api.map((proj, index) => {
+          if (projetosData[index+1]?.id === proj.id) {
+            setProjectObject(proj);
+            // console.log('id do projeto via porjetoData', projetosData[index]?.id)
+            // console.log('porjeto a ser renderizado', proj)
+            // console.log('porjeto a ser renderizado', proj.id)
           }
-        };
+        });
+      } else {
+        // console.log(parametroIgualProjetoname);
+        console.log(projetosData);
+        // setTimeout(() => {
+        //   router.push('/');
+        // }, 1500);
+      }
+    }
+    // caso seja direcionado pela escrita do nome do projeto pela URL
+  }, [router, projetosData]);
 
-        if (verifica() == true) {
-          console.log('params igual a nome de projeto', params?.id)
-          api.map((proj, index) => {
-            if (projetosData) {
-              if (projetosData[index + 1]?.id === proj.id) { //se a lista de id de cada projeto bater com algum id do porjeto que vem da api ele seta o valor de projectObject e transforma o obj em string e joga no localstorage
-                setProjectObject(proj);
-                return localStorage.setItem('project', JSON.stringify(proj));
-              }
-            }
-          });
+  useEffect(() => {
+    let cont = 1;
+    // verifica se o paramentro e a lista de projeto com id e linkTo existe
+    if (projetosData && params?.id) { 
+      for (let i = 0; i < projetosData.length; i++) {
+        if (projetosData[i].linkTo === params.id) {  //verifica se algum projeto bate com o nome do projeto que recebe de parametro
+          cont++;
+          setDataAExibir()
+        } else if (projetosData.length - 1 === i && cont <= 1) { //caso depois de percorrer todos os projetos e nenhum corremponder dele:
+          localStorage.removeItem('project');
+          setProjectObject(null);
+          setTimeout(() => {
+            router.push('/404');
+          }, 1800);
         }
       }
     }
-  }, [params?.id, projetosData, router]);
+  }, [params?.id, router, projetosData]);
+
+  const setDataAExibir = () => {
+    
+  }
 
   return (
     <>

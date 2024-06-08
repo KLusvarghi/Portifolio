@@ -3,7 +3,6 @@
 .introContainer {
   position: relative;
   height: 100vh;
-  // width: 100vw;
   padding: 0px;
   background-image: url('./../../../public/background/bgUp.svg');
   background-position: center;
@@ -125,10 +124,9 @@
     }
 
     .mouse {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 6px;
+      position: absolute;
+      bottom: 2%;
+      right: 49%;
 
       .scroll {
         position: relative;
