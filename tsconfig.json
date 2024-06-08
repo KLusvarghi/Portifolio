@@ -27,7 +27,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/theme/theme.ts",
-    "pages/Projetos/[id]/[id.tsx"
+    "[Projetos]/[id]/[id.tsx"
   ],
   "exclude": ["node_modules"]
 }

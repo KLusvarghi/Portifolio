@@ -27,8 +27,8 @@ export default function Header({ otherPage }: Prop) {
         height={20}
         loading="eager"
         onError={(e) => console.error('error: ', e.target)}
-        onClick={() => router.push('/')} 
-        priority // Adicione a propriedade priority para priorizar o carregamento
+        onClick={() => router.push('/')}
+        priority={true}
       />
       <nav
         className={classNames({

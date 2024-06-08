@@ -1,16 +1,22 @@
 'use client';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../pages/components/Header';
+import Footer from '../pages/components/Footer';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './Projeto.module.scss';
 import Image from 'next/image';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import Button from '../components/Button';
-import Head from '../Helper/Head';
-import AnimatedSection from '../Helper/AnimatedSection';
-import Loading from '../Helper/Loading';
-import UseWindowSize from '../Helper/windowSize';
+import Button from '../pages/components/Button';
+import Head from '../pages/Helper/Head';
+import AnimatedSection from '../pages/Helper/AnimatedSection';
+import Loading from '../pages/Helper/Loading';
+import UseWindowSize from '../pages/Helper/windowSize';
+
+interface ProjetoParams {
+  params: {
+    projectId: string,
+  }
+}
 
 interface ProjetoInterface {
   id: number;
@@ -24,7 +30,7 @@ interface ProjetoInterface {
   linkTo: string;
 }
 
-export default function Projetos() {
+export default function Projeto({params}: ProjetoParams) {
   const router = useRouter();
   const [projectObject, setProjectObject] = useState<ProjetoInterface | null>(
     null,
@@ -34,7 +40,15 @@ export default function Projetos() {
     router.back();
   };
 
-  useEffect(() => {
+
+  if(params.projectId === 'kaua'){
+    console.log('deu certo')
+    router.push("/")
+    }
+    
+    useEffect(() => {
+    console.log('parametro', params.projectId)
+    console.log('redasdewade')
     const string = localStorage.getItem('project');
     if (typeof window !== 'undefined') {
       if (string) setProjectObject(JSON.parse(string));
@@ -44,7 +58,7 @@ export default function Projetos() {
         router.push('/');
       }, 1500);
     }
-  }, [router]);
+  }, [router, params.projectId]);
 
   return (
     <>
@@ -77,6 +91,7 @@ export default function Projetos() {
                         height={500}
                         loading="eager"
                         onError={(e) => console.error('error: ', e.target)}
+                        priority={true}
                       />
                     </div>
                   ) : (

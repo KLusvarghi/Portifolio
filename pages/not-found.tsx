@@ -1,9 +1,9 @@
 'use client';
 import React, { useEffect } from 'react';
 import styles from './NotFound.module.scss';
-import Button from '../../pages/components/Button';
+// import Button from '../Button';
 import Image from 'next/image';
-import Head from '../../pages/Helper/Head';
+import Head from '../pages/Helper/Head';
 // import { useRouter } from 'next/navigation';
 
 export default function NotFound() {
@@ -15,7 +15,7 @@ export default function NotFound() {
 
   return (
     <>
-        <Head title="404 - Página não encontrada..." />
+      <Head title="404 - Página não encontrada..." />
       <main className={styles.notFoundContainer}>
         <div className={styles.wrapper}>
           {/* <h1>404</h1> */}

@@ -41,6 +41,7 @@ export default function Projetos() {
                     height={400}
                     loading="eager"
                     onError={(e) => console.error('error: ', e.target)}
+                    priority={true}
                   />
                 </div>
                 <div className={styles.description}>

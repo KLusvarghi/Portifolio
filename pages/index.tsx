@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import Footer from './components/Foooter';
+import Footer from './components/Footer';
 import Head from './Helper/Head';
 import Intro from './components/Intro';
 import AboutMe from './components/AboutMe';
