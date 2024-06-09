@@ -48,7 +48,7 @@ export default function Intro() {
                 <InstagramIcon />
               </LinkNext>
               <LinkNext
-                href="https://drive.google.com/file/d/15YoWCl9BiAazKIh6NmqVAz5L0EMGUd0o/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Wl-DoHlcMQJAxjpF7UaL5RIGcf5OEsFq/view?usp=sharing"
                 target="_blank"
                 replace
               >
