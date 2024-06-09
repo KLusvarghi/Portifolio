@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <style jsx global>{`
         body::-webkit-scrollbar {
-          width: 8px;
+          width: 10px;
         }
 
         body::-webkit-scrollbar-track {

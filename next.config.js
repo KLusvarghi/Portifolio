@@ -2,6 +2,12 @@
 
 module.exports = {
   reactStrictMode: true,
+  webpack(config, { dev }) {
+    if (dev) {
+      config.optimization.minimize = false;
+    }
+    return config;
+  },
   images: {
     remotePatterns: [
       {
@@ -12,4 +18,3 @@ module.exports = {
     ],
   },
 };
-

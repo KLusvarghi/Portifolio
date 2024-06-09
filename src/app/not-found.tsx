@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './NotFound.module.scss';
 import Button from '../../pages/components/Button';
 import Image from 'next/image';

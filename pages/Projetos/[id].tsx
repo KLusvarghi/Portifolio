@@ -54,7 +54,6 @@ export default function Projeto() {
     setProjetosData(nameProject);
   }, [params?.id]);
 
-  // ------------------------------------------------------------------------------------- nao mexer daq pra cima
 
   useEffect(() => {
     // caso tenha sido direconado com o click do "botao"

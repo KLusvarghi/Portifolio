@@ -5,7 +5,6 @@ const Error = ({error}: boolean | any) => {
   const [color, setColor] = useState('blue');
 
   useEffect(() => {
-    // Simula um cálculo ou obtenção de um valor dinâmico
     setColor('#f31');
   }, []);
   if (!error) return null;

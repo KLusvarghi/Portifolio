@@ -25,6 +25,7 @@
     "classnames": "^2.5.1",
     "clean-css": "^5.3.3",
     "framer-motion": "^11.2.10",
+    "mobile-detect": "^1.4.5",
     "mui-styles": "^2.0.5",
     "next": "14.2.3",
     "normalize.css": "^8.0.1",
