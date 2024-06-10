@@ -74,7 +74,7 @@ export default function AboutMe() {
                 correspondente. Convido você a se conectar ou me seguir no{' '}
                 <Link
                   className={styles.link}
-                  href="https://www.linkedin.com/in/kaua-ortolani-lusvarghi-422b141b4/"
+                  href="https://www.linkedin.com/in/kau%C3%A3-ortolani-lusvarghi-422b141b4/"
                   target="_blank"
                   replace
                 >

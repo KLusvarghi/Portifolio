@@ -34,7 +34,7 @@ export default function Intro() {
                 <GitHubIcon />
               </LinkNext>
               <LinkNext
-                href="https://www.linkedin.com/in/kaua-ortolani-lusvarghi-422b141b4/"
+                href="https://www.linkedin.com/in/kau%C3%A3-ortolani-lusvarghi-422b141b4/"
                 target="_blank"
                 replace
               >
