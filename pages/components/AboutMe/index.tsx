@@ -62,7 +62,7 @@ export default function AboutMe() {
                 <span className={styles.bold}>Web Frontend</span>, concentro
                 meus esforços na construção e gerenciamento das interfaces de
                 sites e aplicações Web, visando impulsionar o sucesso do produto
-                como um todo. Estou atualmente no último semestre do curso de{' '}
+                como um todo. Atualmente formado no curso de{' '}
                 <span className={styles.bold}>
                   Análise e Desenvolvimento de Sistemas
                 </span>{' '}
